@@ -8,17 +8,23 @@ class customWidget {
     IconData? icon,
     required bool istrue,
     Color? lcolor,
-    Color? scolor
+    Color? scolor,
+    Color? fontColor
   }) {
     return
       TextField(
+        style: TextStyle(color: fontColor),
         obscureText: istrue,
         controller: controller,
+        scrollPadding: EdgeInsets.only(
+        bottom: 200,
+      ),
         decoration: InputDecoration(
+          fillColor: Colors.green,
           label: Text("$label",style:TextStyle(color: lcolor) ,),
           suffixIcon: Icon(icon,color: scolor,),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(21)),
-        ),
+        )
 
     );
   }

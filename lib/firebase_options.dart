@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '25080661999',
     projectId: 'fitlife-8c7bd',
     storageBucket: 'fitlife-8c7bd.firebasestorage.app',
+    iosClientId: '25080661999-rkdhi4ck113gr32h0rmkrf20ghavptj6.apps.googleusercontent.com',
     iosBundleId: 'com.example.fitlife',
   );
+
 }

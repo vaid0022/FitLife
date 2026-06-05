@@ -12,7 +12,12 @@
           "package_name": "com.example.fitlife"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "25080661999-ns0cq28hae6f39etc9aetniarif7dg78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyALY_ybznIQMhFcfEQR-wcRd4VgUo1jnyA"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25080661999-ns0cq28hae6f39etc9aetniarif7dg78.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "25080661999-rkdhi4ck113gr32h0rmkrf20ghavptj6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitlife"
+              }
+            }
+          ]
         }
       }
     }

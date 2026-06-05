@@ -1,17 +1,19 @@
 import 'dart:ui';
 
+import 'package:fitlife/Authentication/LoginLogic.dart';
 import 'package:fitlife/Authentication/Register.dart';
 import 'package:fitlife/custom.dart';
 import 'package:flutter/material.dart';
 
-class loginpage extends StatelessWidget
-{
+class loginpage extends StatelessWidget {
   @override
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passcontroller = TextEditingController();
 
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -38,7 +40,7 @@ class loginpage extends StatelessWidget
                       style: TextStyle(fontSize: 60, color: Colors.white),
                     ),
                   ),
-                SizedBox(height: 30,),
+                  SizedBox(height: 30),
                   customWidget.textField(
                     controller: emailcontroller,
                     istrue: false,
@@ -46,8 +48,9 @@ class loginpage extends StatelessWidget
                     icon: Icons.email,
                     lcolor: Colors.white,
                     scolor: Colors.white,
+                    fontColor: Colors.white,
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 20),
                   customWidget.textField(
                     controller: passcontroller,
                     istrue: true,
@@ -55,6 +58,7 @@ class loginpage extends StatelessWidget
                     icon: Icons.password_outlined,
                     lcolor: Colors.white,
                     scolor: Colors.white,
+                    fontColor: Colors.white,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -83,9 +87,15 @@ class loginpage extends StatelessWidget
                     width: 400,
                     height: 40,
                     child: customWidget.elevatedButton(
-                      callback: () {},
+                      callback: () {
+                        loginlogic.firebaseLogin(
+                          context: context,
+                          email: emailcontroller.text.toString(),
+                          pass: passcontroller.text.toString(),
+                        );
+                      },
                       text: "Login",
-                      color: Colors.white70,
+                      color: Colors.blue,
                     ),
                   ),
                   Row(
@@ -113,37 +123,7 @@ class loginpage extends StatelessWidget
                       ),
                     ],
                   ),
-
-                  SizedBox(height: 10),
-                  Text(
-                    "OR",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                  Divider(
-                    endIndent: 85,
-                  ),
-                  SizedBox(height: 10),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: SizedBox(
-                      width: 240,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white54,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset("assets/login_res/google.png", width: 30),
-                            SizedBox(width: 10),
-                            Text("Google", style: TextStyle(fontSize: 30,color: Colors.white)),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 80),
+                  SizedBox(height: 180),
                 ],
               ),
             ),
@@ -154,24 +134,62 @@ class loginpage extends StatelessWidget
   }
 }
 
-class Forgotpassword extends StatelessWidget {
-  TextEditingController Fopass=TextEditingController();
+class Forgotpassword extends StatefulWidget {
+  @override
+  State<Forgotpassword> createState() => _ForgotpasswordState();
+}
+
+class _ForgotpasswordState extends State<Forgotpassword> {
+  TextEditingController Fopass = TextEditingController();
 
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-        width: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.3 + MediaQuery.of(context).viewInsets.bottom,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(50),
+      ),
+      padding: EdgeInsets.all(11),
+      child: SingleChildScrollView(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Forgot Password",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-            SizedBox(height: 75,),
-            customWidget.textField(controller: Fopass, istrue: false,label: "E-mail",icon: Icons.email,),
-            SizedBox(height: 50,),
+            Text(
+              "Forgot Password",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
+            ),
+            SizedBox(height: 75),
+            customWidget.textField(
+              controller: Fopass,
+              istrue: false,
+              lcolor: Colors.white,
+              label: "E-mail",
+              scolor: Colors.white,
+              icon: Icons.email_outlined,
+              fontColor: Colors.white,
+            ),
+            SizedBox(height: 50),
             SizedBox(
               width: 400,
-                child: customWidget.elevatedButton(callback: (){}, text:"Forgot Password",color: Colors.black))
+              child: customWidget.elevatedButton(
+                callback: () {
+                  loginlogic.firebaseForgotpassword(
+                    email: Fopass.text.toString(),
+                    context: context,
+                  );
+                },
+                text: "Forgot Password",
+                color: Colors.blue,
+              ),
+            ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
