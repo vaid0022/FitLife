@@ -1,5 +1,8 @@
+import 'dart:developer';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/home.dart';
+import 'package:fitlife/View/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -13,22 +16,31 @@ class registerLogic {
     UserCredential userCredential;
 
     try {
+
       if (username.isNotEmpty && email.isNotEmpty && pass.isNotEmpty) {
-        if (email == "@") {
+
           userCredential = await FirebaseAuth.instance
               .createUserWithEmailAndPassword(email: email, password: pass);
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>home()));
+
+          final user = userCredential.user;
+
+          FirebaseFirestore.instance.collection("User").doc(user! .uid).set(
+              {
+                "name" : username,
+                "email" : user.email,
+                'uid' : user.uid,
+                'createAt' : DateTime.now().toIso8601String()
+              }).then((_){
+            log(" register successfully");
+          });
 
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text("Please Enter email in right format")),
           );
         }
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Pleasen Fill all all requriment")),
-        );
-      }
+
     } catch (error) {
       ScaffoldMessenger.of(
         context,

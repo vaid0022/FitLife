@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/Authentication/LoginPage.dart';
-import 'package:fitlife/home.dart';
+import 'package:fitlife/View/LoginPage.dart';
+import 'package:fitlife/View/home.dart';
+
 import 'package:flutter/material.dart';
 
 class checkuser extends StatelessWidget {

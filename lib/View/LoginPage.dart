@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:fitlife/Authentication/LoginLogic.dart';
-import 'package:fitlife/Authentication/Register.dart';
+import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/FirebaseLogin.dart';
+import 'package:fitlife/View/Register.dart';
 import 'package:fitlife/custom.dart';
 import 'package:flutter/material.dart';
 
