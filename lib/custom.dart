@@ -5,6 +5,7 @@ class customWidget {
   static Widget textField({
     required TextEditingController controller,
     String? label,
+    String? stext,
     IconData? icon,
     required bool istrue,
     Color? lcolor,
@@ -23,6 +24,7 @@ class customWidget {
           fillColor: Colors.green,
           label: Text("$label",style:TextStyle(color: lcolor) ,),
           suffixIcon: Icon(icon,color: scolor,),
+          suffix: Text(stext!),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(21)),
         )
 

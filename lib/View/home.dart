@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:fitlife/Reposetory/Firebase/FireStore/Fetchdata.dart';
 import 'package:fitlife/View/LoginPage.dart';
 import 'package:fitlife/custom.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -141,14 +141,14 @@ class _BmiCalculatorState extends State<BmiCalculator> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            SizedBox(height: 50,),
+            SizedBox(height: 50),
             Center(
               child: Text(
                 "Bmi Calculator",
                 style: TextStyle(color: Colors.white, fontSize: 50),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: customWidget.textField(
@@ -159,6 +159,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 icon: Icons.height,
                 lcolor: Colors.white,
                 scolor: Colors.white,
+                stext: "Foot"
               ),
             ),
             Padding(
@@ -171,14 +172,20 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 icon: Icons.monitor_weight_outlined,
                 lcolor: Colors.white,
                 scolor: Colors.white,
+                stext: "Kg"
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                  width: 500,
-                  child: customWidget.elevatedButton(callback: (){}, text:"Calculate your BMI",color: Colors.lightBlueAccent)),
-            )
+                width: 500,
+                child: customWidget.elevatedButton(
+                  callback: () {},
+                  text: "Calculate your BMI",
+                  color: Colors.lightBlueAccent,
+                ),
+              ),
+            ),
           ],
         ),
       ),
