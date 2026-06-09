@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitlife/View/LoginPage.dart';
 import 'package:fitlife/View/home.dart';
+import 'package:fitlife/ViewModel/navifationbar.dart';
 
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class checkuser extends StatelessWidget {
     final User? user=FirebaseAuth.instance.currentUser;
     if(user !=null)
     {
-      return home();
+      return bottomnavigationabar();
     }else{
       return loginpage();
     }

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitlife/Reposetory/Firebase/FireStore/Fetchdata.dart';
 import 'package:fitlife/View/LoginPage.dart';
+import 'package:fitlife/ViewModel/HomepageModel.dart';
 import 'package:fitlife/custom.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: Text("Fitlife"),
         actions: [
@@ -34,28 +36,32 @@ class _homeState extends State<home> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 20),
-
-          // UserInfo
-          user(),
-
-          // Bmi Calculator
-          BmiCalculator(),
-
-          Container(
-            height: 176,
-            width: double.infinity,
-            color: Colors.black,
-            child: Center(
-              child: Text(
-                "Information about app",
-                style: TextStyle(color: Colors.white, fontSize: 50),
-              ),
-            ),
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+          
+              // UserInfo
+              user(),
+          
+              // Bmi Calculator
+              BmiCalculator(),
+          
+            Container(
+                  width: double.infinity,
+                  color: Colors.black,
+                  child: Center(
+                    child: Text(
+                      "Information about app",
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
+                  ),
+                ),
+          
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -134,7 +140,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: MediaQuery.of(context).size.height,
       width: double.infinity,
       color: Colors.grey,
       child: Padding(
@@ -159,7 +165,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 icon: Icons.height,
                 lcolor: Colors.white,
                 scolor: Colors.white,
-                stext: "Foot"
+                stext: "cm",
               ),
             ),
             Padding(
@@ -172,7 +178,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 icon: Icons.monitor_weight_outlined,
                 lcolor: Colors.white,
                 scolor: Colors.white,
-                stext: "Kg"
+                stext: "Kg",
               ),
             ),
             Padding(
@@ -180,11 +186,24 @@ class _BmiCalculatorState extends State<BmiCalculator> {
               child: Container(
                 width: 500,
                 child: customWidget.elevatedButton(
-                  callback: () {},
+                  callback: () {
+                    Homepagemodel.BmiCaclulator(
+                      heightcon: heightController.text.toString(),
+                      weightcon: weightController.text.toString(),
+                      context: context,
+                    );
+                    heightController.clear();
+                    weightController.clear();
+                    setState(() {});
+                  },
                   text: "Calculate your BMI",
                   color: Colors.lightBlueAccent,
                 ),
               ),
+            ),
+            Text(
+              "Bmi: ${Homepagemodel.Bmi.toStringAsFixed(2)}\nResult: ${Homepagemodel.calBmi}",
+              style: TextStyle(fontSize: 30, color: Colors.white),
             ),
           ],
         ),
