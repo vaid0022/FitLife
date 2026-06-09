@@ -1,10 +1,10 @@
 import 'package:fitlife/Model/ExerciseModel.dart';
+import 'package:fitlife/ViewModel/Exerciselogic.dart';
 import 'package:flutter/material.dart';
 
 class Detailexercisepage extends StatefulWidget {
   int index;
-  AsyncSnapshot<ExerciseModel> snapshot;
-  Detailexercisepage({super.key, required this.index, required this.snapshot});
+  Detailexercisepage({super.key, required this.index,});
 
   @override
   State<Detailexercisepage> createState() => _DetailexercisepageState();
@@ -26,8 +26,8 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
               ),
             ),
             Container(child: Column(children: [
-              Text(widget.snapshot.data!.data![widget.index].title.toString()),
-              Text(widget.snapshot.data!.data![widget.index].category.toString()),
+              Text(Exerciselogic.AllExerciese[widget.index].title.toString()),
+              Text(Exerciselogic.AllExerciese[widget.index].description.toString()),
             ])),
           ],
         ),

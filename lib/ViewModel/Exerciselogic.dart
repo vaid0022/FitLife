@@ -8,13 +8,23 @@ import 'package:http/http.dart' as http;
 import 'package:fitlife/Model/ExerciseModel.dart';
 
 class Exerciselogic{
+static int page = 1;
+static bool isLoading = false;
+static bool hasMoreData = true;
+static List<Data> AllExerciese = [];
+static ScrollController scrollController =ScrollController();
 
 
-  static Future<ExerciseModel> GetApi()async{
+  static Future<ExerciseModel> GetApi({int? pageOG})async{
 
     String url =   "https://exercise-api.ymove.app/api/v2/exercises?muscleGroup=chest&hasVideo=true";
 
-    final urll = Uri.parse(url);
+     Uri urll = Uri.parse(url);
+    urll = urll.replace(queryParameters: {
+      ...urll.queryParameters,
+      "page" : "${pageOG ?? 1}",
+      "pageSize" : "10",
+    });
 
     final response = await http.get(urll,headers: {
       "X-API-Key" : "ym_0879d7d7568f72ee85fa90ca3b612d6651506c331918932dfe0845c402a33513"
@@ -26,6 +36,7 @@ class Exerciselogic{
 
        try{
          var data = jsonDecode(response.body.toString());
+
          return ExerciseModel.fromJson(data);
        }catch(e){
          throw Exception("Error: $e");
@@ -34,4 +45,62 @@ class Exerciselogic{
      throw Exception("Api Failed");
    }
   }
+
+  static Future<void> FetchData()async{
+
+    if(isLoading)return;
+
+    isLoading  = true;
+
+    try{
+
+      ExerciseModel Exercise =  await GetApi(pageOG: page);
+
+      if(Exercise.data == null || Exercise.data!.isEmpty){
+
+        hasMoreData = false;
+      }else{
+
+         hasMoreData = Exercise.pagination!.page! <
+                        Exercise.pagination!.totalPages!;
+
+         AllExerciese.addAll(Exercise.data!);
+      }
+    }catch (error){
+      throw Exception("Error: $error");
+    }finally{
+      isLoading = false;
+  }
+  }
+
+  static Future<void> HasMoreData()async{
+    if(isLoading || !hasMoreData)return;
+
+    page++;
+
+    await FetchData();
+
+  }
+
+  static setUpPagination(VoidCallback UiRefresh)async{
+
+    scrollController.addListener((){
+      if(scrollController.position.pixels >= scrollController.position.maxScrollExtent - 200){
+
+        HasMoreData().then((_){
+          UiRefresh();
+        });
+      }
+    });
+  }
+
+  static Future<void> Reset()async{
+    page = 1;
+    isLoading = false;
+    hasMoreData = true;
+    AllExerciese.clear();
+
+    await FetchData();
+  }
+
 }

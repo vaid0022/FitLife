@@ -1,6 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fitlife/Model/ExerciseModel.dart';
-import 'package:fitlife/Videowidget.dart';
 import 'package:fitlife/View/DetailExercisePage.dart';
 import 'package:fitlife/ViewModel/Exerciselogic.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +11,31 @@ class Workoutpage extends StatefulWidget {
 
 class _WorkoutpageState extends State<Workoutpage> {
   @override
+  @override
+  void initState() {
+    super.initState();
+
+    Exerciselogic.Reset().then((_){
+      if(mounted){
+        setState(() {
+
+        });
+      }
+    });
+
+    Exerciselogic.setUpPagination(() {
+      if (mounted) {
+        setState(() {});
+      }
+    });
+  }
+
+  void dispose() {
+    Exerciselogic.scrollController.dispose();
+
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -21,73 +43,75 @@ class _WorkoutpageState extends State<Workoutpage> {
         centerTitle: true,
       ),
 
-      body: FutureBuilder(
-        future: Exerciselogic.GetApi(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text("Error: ${snapshot.error}"));
-          } else if (!snapshot.hasData ||
-              snapshot.data!.data == null ||
-              snapshot.data!.data!.isEmpty) {
-            return Center(child: Text("No data available"));
-          }
-          return  ListView.builder(
-              itemCount: snapshot.data!.data!.length,
+      body: Exerciselogic.AllExerciese.isEmpty
+          ? Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              controller: Exerciselogic.scrollController,
+              itemCount: Exerciselogic.AllExerciese.length + (Exerciselogic.hasMoreData ? 1 : 0),
               itemBuilder: (context, index) {
-                return ExerciseList(index:index,snapshot: snapshot);
-              }
+                if (index == Exerciselogic.AllExerciese.length) {
+                  return Center(child: CircularProgressIndicator());
+                }
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Detailexercisepage(index: index),
+                      ),
+                    );
+                  },
 
-          );
-            },
-      ),
-    );
-  }
-}
-
-
-class ExerciseList extends StatelessWidget {
-  int index;
-  AsyncSnapshot<ExerciseModel> snapshot;
-  ExerciseList({super.key,required this.snapshot,required this.index});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>Detailexercisepage(index: index,snapshot: snapshot,)));
-      },
-
-        child:Hero(
-          tag: "hero",
-          child: Card(
-            child: ListTile(
-                  title: Column(
-                    children: [
-                      Text(snapshot.data!.data![index].title.toString()),
-                      Container(
-                        height: 300,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                              snapshot.data!.data![index].thumbnailUrl.toString(),
-                            ),
-                            fit: BoxFit.cover,
+                  child: Hero(
+                    tag: "hero",
+                    child: Card(
+                      child: ListTile(
+                        title: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            children: [
+                              Card(
+                                elevation: 8,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(20.0),
+                                  child: Text(
+                                    Exerciselogic.AllExerciese[index].title
+                                        .toString(),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 20),
+                              Container(
+                                height: 300,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.black,width: 3),
+                                  borderRadius: BorderRadius.circular(21),
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      Exerciselogic
+                                          .AllExerciese[index]
+                                          .thumbnailUrl
+                                          .toString(),
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
+                        subtitle: Text(
+                          Exerciselogic.AllExerciese[index].description
+                              .toString(),
+                        ),
                       ),
-                    ],
+                    ),
                   ),
-                  subtitle: Text(
-                    snapshot.data!.data![index].description.toString(),
-
-                ),
+                );
+                ;
+              },
             ),
-          ),
-        ),
     );
   }
 }
-

@@ -25,9 +25,7 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
 
   final List<Widget> _pages = [home(),Workoutpage(), Dietpage()];
   Widget build(BuildContext context) {
-    return SafeArea(
-
-      child: Scaffold(
+    return Scaffold(
         resizeToAvoidBottomInset: true,
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _SelectedIndex,
@@ -44,7 +42,7 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
           ],
         ),
         body: _pages[_SelectedIndex],
-      ),
+
     );
   }
 }
