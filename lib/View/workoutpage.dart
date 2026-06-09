@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fitlife/Model/ExerciseModel.dart';
 import 'package:fitlife/Videowidget.dart';
+import 'package:fitlife/View/DetailExercisePage.dart';
 import 'package:fitlife/ViewModel/Exerciselogic.dart';
 import 'package:flutter/material.dart';
 
@@ -32,8 +33,14 @@ class _WorkoutpageState extends State<Workoutpage> {
               snapshot.data!.data!.isEmpty) {
             return Center(child: Text("No data available"));
           }
-          return ExerciseList(snapshot: snapshot);
-        },
+          return  ListView.builder(
+              itemCount: snapshot.data!.data!.length,
+              itemBuilder: (context, index) {
+                return ExerciseList(index:index,snapshot: snapshot);
+              }
+
+          );
+            },
       ),
     );
   }
@@ -41,41 +48,46 @@ class _WorkoutpageState extends State<Workoutpage> {
 
 
 class ExerciseList extends StatelessWidget {
-  
+  int index;
   AsyncSnapshot<ExerciseModel> snapshot;
-  ExerciseList({super.key,required this.snapshot});
+  ExerciseList({super.key,required this.snapshot,required this.index});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      child: ListView.builder(
-        itemCount: snapshot.data!.data!.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Column(
-              children: [
-                Text(snapshot.data!.data![index].title.toString()),
-                Container(
-                  height: 300,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                        snapshot.data!.data![index].thumbnailUrl.toString(),
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Detailexercisepage(index: index,snapshot: snapshot,)));
+      },
+
+        child:Hero(
+          tag: "hero",
+          child: Card(
+            child: ListTile(
+                  title: Column(
+                    children: [
+                      Text(snapshot.data!.data![index].title.toString()),
+                      Container(
+                        height: 300,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              snapshot.data!.data![index].thumbnailUrl.toString(),
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
-                      fit: BoxFit.cover,
-                    ),
+                    ],
                   ),
+                  subtitle: Text(
+                    snapshot.data!.data![index].description.toString(),
+
                 ),
-              ],
             ),
-            subtitle: Text(
-              snapshot.data!.data![index].description.toString(),
-            ),
-          );
-        },
-      ),
-    );;
+          ),
+        ),
+    );
   }
 }
 

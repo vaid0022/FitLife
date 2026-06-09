@@ -25,23 +25,26 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
 
   final List<Widget> _pages = [home(),Workoutpage(), Dietpage()];
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: true,
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _SelectedIndex,
-        onTap: _BottomNavigationbar,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.work), label: "WorkOut"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.airline_seat_individual_suite),
-            label: "Dietplan",
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
-        ],
+    return SafeArea(
+
+      child: Scaffold(
+        resizeToAvoidBottomInset: true,
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _SelectedIndex,
+          onTap: _BottomNavigationbar,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.work), label: "WorkOut"),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.airline_seat_individual_suite),
+              label: "Dietplan",
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
+          ],
+        ),
+        body: _pages[_SelectedIndex],
       ),
-      body: _pages[_SelectedIndex],
     );
   }
 }
