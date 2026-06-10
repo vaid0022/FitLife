@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitlife/View/home.dart';
+import 'package:fitlife/ViewModel/navifationbar.dart';
 import 'package:flutter/material.dart';
 
 class loginlogic {
@@ -18,7 +19,7 @@ class loginlogic {
         );
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => home()),
+          MaterialPageRoute(builder: (context) => bottomnavigationabar()),
         );
       } else {
         ScaffoldMessenger.of(

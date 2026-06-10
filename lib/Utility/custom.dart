@@ -24,7 +24,7 @@ class customWidget {
           fillColor: Colors.green,
           label: Text("$label",style:TextStyle(color: lcolor) ,),
           suffixIcon: Icon(icon,color: scolor,),
-          suffix: Text(stext!) ?? null,
+          suffix: Text(stext ?? "")  ,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(21)),
         )
 
