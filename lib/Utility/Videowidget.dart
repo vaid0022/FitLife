@@ -23,7 +23,8 @@ class _VideoWidgetState extends State<VideoWidget> {
     controller = VideoPlayerController.networkUrl(
       Uri.parse(widget.videoUrl),
     )
-      ..initialize().then((_) {
+      ..initialize().then((_)async {
+        await controller.setLooping(true);
         setState(() {});
         controller.play();
       });

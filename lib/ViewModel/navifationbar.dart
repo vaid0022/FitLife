@@ -28,6 +28,9 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
     return Scaffold(
         resizeToAvoidBottomInset: true,
         bottomNavigationBar: BottomNavigationBar(
+          fixedColor: Colors.lightBlueAccent,
+          backgroundColor: Colors.grey.shade100,
+          elevation: 10,
           currentIndex: _SelectedIndex,
           onTap: _BottomNavigationbar,
           type: BottomNavigationBarType.fixed,

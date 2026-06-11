@@ -38,10 +38,7 @@ class _WorkoutpageState extends State<Workoutpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Workout", style: TextStyle(fontSize: 40)),
-        centerTitle: true,
-      ),
+     appBar: AppBar(),
 
       body: Exerciselogic.AllExerciese.isEmpty
           ? Center(child: CircularProgressIndicator())
@@ -64,46 +61,44 @@ class _WorkoutpageState extends State<Workoutpage> {
 
                   child: Hero(
                     tag: "hero",
-                    child: Card(
-                      child: ListTile(
-                        title: Padding(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Card(
+                        child: Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            children: [
-                              Card(
-                                elevation: 8,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(20.0),
-                                  child: Text(
-                                    Exerciselogic.AllExerciese[index].title
-                                        .toString(),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 20),
-                              Container(
-                                height: 300,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black,width: 3),
-                                  borderRadius: BorderRadius.circular(21),
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                      Exerciselogic
-                                          .AllExerciese[index]
-                                          .thumbnailUrl
-                                          .toString(),
+                          child: ListTile(
+                            title: Column(
+                                children: [
+                                 Text(
+                                        Exerciselogic.AllExerciese[index].title
+                                            .toString(),
+                                      ),
+                                  SizedBox(height: 20),
+                                  Container(
+                                    height: 300,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: Colors.black,width: 1),
+                                      borderRadius: BorderRadius.circular(21),
+                                      image: DecorationImage(
+                                        image: NetworkImage(
+                                          Exerciselogic
+                                              .AllExerciese[index]
+                                              .thumbnailUrl
+                                              .toString(),
+                                        ),
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                    fit: BoxFit.cover,
                                   ),
-                                ),
+                                  SizedBox(height: 20,)
+                                ],
                               ),
-                            ],
+                            subtitle: Text(
+                              Exerciselogic.AllExerciese[index].description
+                                  .toString(),maxLines: 3,overflow: TextOverflow.ellipsis,
+                            ),
                           ),
-                        ),
-                        subtitle: Text(
-                          Exerciselogic.AllExerciese[index].description
-                              .toString(),
                         ),
                       ),
                     ),

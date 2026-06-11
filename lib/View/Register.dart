@@ -2,8 +2,8 @@ import 'dart:ui';
 
 
 import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/FirebaseRegister.dart';
+import 'package:fitlife/Utility/custom.dart';
 import 'package:fitlife/View/LoginPage.dart';
-import 'package:fitlife/custom.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {

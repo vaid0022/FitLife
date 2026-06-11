@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/FirebaseLogin.dart';
+import 'package:fitlife/Utility/custom.dart';
 import 'package:fitlife/View/Register.dart';
-import 'package:fitlife/custom.dart';
 import 'package:flutter/material.dart';
 
 class loginpage extends StatelessWidget {

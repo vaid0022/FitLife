@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitlife/Reposetory/Firebase/FireStore/Fetchdata.dart';
+import 'package:fitlife/Utility/custom.dart';
 import 'package:fitlife/View/LoginPage.dart';
 import 'package:fitlife/ViewModel/HomepageModel.dart';
-import 'package:fitlife/custom.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
