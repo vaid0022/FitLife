@@ -25,10 +25,11 @@ class registerLogic {
 
           final user = userCredential.user;
 
-          FirebaseFirestore.instance.collection("User").doc(user! .uid).set(
+          FirebaseFirestore.instance.collection("User").doc(user!.uid).set(
               {
                 "name" : username,
                 "email" : user.email,
+                "password" : pass,
                 'uid' : user.uid,
                 'createAt' : DateTime.now().toIso8601String()
               }).then((_){
@@ -48,28 +49,4 @@ class registerLogic {
     }
   }
 
-  static FirebaseSigupWithGoogle({required BuildContext context}) async {
-    String webClientId =
-        "25080661999-ns0cq28hae6f39etc9aetniarif7dg78.apps.googleusercontent.com";
-
-    try {
-      GoogleSignIn googleSignIn = GoogleSignIn.instance;
-
-      await googleSignIn.initialize(serverClientId: webClientId);
-
-      GoogleSignInAccount account = await googleSignIn.authenticate();
-
-      GoogleSignInAuthentication GoogleAuth = account.authentication;
-
-      final credential = GoogleAuthProvider.credential(
-        idToken: GoogleAuth.idToken,
-      );
-
-      FirebaseAuth.instance.signInWithCredential(credential);
-    } catch (error) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(error.toString())));
-    }
-  }
 }

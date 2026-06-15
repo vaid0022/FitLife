@@ -57,6 +57,7 @@ class _RegisterState extends State<Register> {
                                     icon: Icons.supervised_user_circle_outlined,
                                     lcolor: Colors.black,
                                     scolor: Colors.black,
+                                    fillColor: Colors.grey.shade200
                                   ),
                                 ),
                               ),
@@ -72,6 +73,7 @@ class _RegisterState extends State<Register> {
                                     icon: Icons.email,
                                     lcolor: Colors.black,
                                     scolor: Colors.black,
+                                    fillColor: Colors.grey.shade200
                                   ),
                                 ),
                               ),
@@ -88,6 +90,7 @@ class _RegisterState extends State<Register> {
                                     icon: Icons.password_outlined,
                                     lcolor: Colors.black,
                                     scolor: Colors.black,
+                                    fillColor: Colors.grey.shade200
                                   ),
                                 ),
                               ),
@@ -135,34 +138,7 @@ class _RegisterState extends State<Register> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 10),
-                              Text(
-                                "or",
-                                style: TextStyle(color: Colors.black, fontSize: 20),
-                              ),
-                              Divider(),
-                              SizedBox(height: 5),
-                              SizedBox(
-                                width: 315,
-                                child: ElevatedButton(
-                                  onPressed: () {
 
-                                    registerLogic.FirebaseSigupWithGoogle(context: context);
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white54,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset("assets/login_res/google.png", width: 30),
-                                      SizedBox(width: 10),
-                                      Text("Google", style: TextStyle(fontSize: 30)),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 20),
                             ],
                           ),
                         ),

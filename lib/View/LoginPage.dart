@@ -32,6 +32,7 @@ class loginpage extends StatelessWidget {
               width: 350,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
                     alignment: Alignment.centerLeft,
@@ -46,9 +47,10 @@ class loginpage extends StatelessWidget {
                     istrue: false,
                     label: "Email",
                     icon: Icons.email,
-                    lcolor: Colors.white,
-                    scolor: Colors.white,
-                    fontColor: Colors.white,
+                    lcolor: Colors.black,
+                    scolor: Colors.black,
+                    fontColor: Colors.black,
+
                   ),
                   SizedBox(height: 20),
                   customWidget.textField(
@@ -56,9 +58,10 @@ class loginpage extends StatelessWidget {
                     istrue: true,
                     label: "Password",
                     icon: Icons.password_outlined,
-                    lcolor: Colors.white,
-                    scolor: Colors.white,
-                    fontColor: Colors.white,
+                    lcolor: Colors.black,
+                    scolor: Colors.black,
+                    fontColor: Colors.black,
+
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -123,7 +126,37 @@ class loginpage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 180),
+                  SizedBox(height: 10),
+                  Center(
+                    child: Text(
+                      "or",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                  SizedBox(width: 270,child: Divider()),
+                  SizedBox(height: 10),
+                  SizedBox(
+                    width: 240,
+                      child: ElevatedButton(
+                        onPressed: () {
+
+                          loginlogic.FirebaseSigupWithGoogle(context: context);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset("assets/login_res/google.png", width: 30),
+                            SizedBox(width: 10),
+                            Text("Google", style: TextStyle(fontSize: 30,color: Colors.grey)),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                  SizedBox(height: 80),
                 ],
               ),
             ),
@@ -167,11 +200,11 @@ class _ForgotpasswordState extends State<Forgotpassword> {
             customWidget.textField(
               controller: Fopass,
               istrue: false,
-              lcolor: Colors.white,
+              lcolor: Colors.black,
               label: "E-mail",
-              scolor: Colors.white,
-              icon: Icons.email_outlined,
-              fontColor: Colors.white,
+              scolor: Colors.black,
+              icon: Icons.email,
+              fontColor: Colors.black,
             ),
             SizedBox(height: 50),
             SizedBox(

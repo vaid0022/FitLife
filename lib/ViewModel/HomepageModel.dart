@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class Homepagemodel {
-  static String calBmi = "Normal";
+  static String calBmi = "---";
   static double Bmi = 0.0;
   static void BmiCaclulator({
     required String heightcon,

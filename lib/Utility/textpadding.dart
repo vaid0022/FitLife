@@ -9,6 +9,7 @@ class textpadding{
     double? fontSize,
     int? lines,
     required bool isLines,
+    Color? color,
   }){
     return Padding(
         padding: EdgeInsetsGeometry.all(padding),
@@ -16,7 +17,7 @@ class textpadding{
           text,
           style: TextStyle(
             fontWeight: isBold ? FontWeight.bold : FontWeight(1),
-            fontSize: fontSize,
+            fontSize: fontSize,color: color
           ),
           maxLines: lines,
           overflow:isLines == true ? TextOverflow.ellipsis : null,

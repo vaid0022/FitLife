@@ -4,6 +4,7 @@ import 'package:fitlife/View/dietpage.dart';
 import 'package:fitlife/View/home.dart';
 import 'package:fitlife/View/workoutpage.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class bottomnavigationabar extends StatefulWidget {
   const bottomnavigationabar({super.key});
@@ -36,12 +37,12 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.work), label: "WorkOut"),
+            BottomNavigationBarItem(icon: Icon(Icons.sports_gymnastics_sharp), label: "WorkOut"),
             BottomNavigationBarItem(
-              icon: Icon(Icons.airline_seat_individual_suite),
+              icon: Icon(Icons.lunch_dining),
               label: "Dietplan",
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.directions_walk), label: "Step"),
           ],
         ),
         body: _pages[_SelectedIndex],
