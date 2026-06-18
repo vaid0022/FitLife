@@ -2,9 +2,12 @@ import 'package:fitlife/View/LoginPage.dart';
 import 'package:fitlife/View/Register.dart';
 import 'package:fitlife/View/dietpage.dart';
 import 'package:fitlife/View/home.dart';
+import 'package:fitlife/View/steps.dart';
 import 'package:fitlife/View/workoutpage.dart';
+import 'package:fitlife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class bottomnavigationabar extends StatefulWidget {
   const bottomnavigationabar({super.key});
@@ -24,13 +27,14 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
     });
   }
 
-  final List<Widget> _pages = [home(),Workoutpage(), Dietpage()];
+  final List<Widget> _pages = [home(),Workoutpage(), Dietpage(),Steps()];
   Widget build(BuildContext context) {
+    final DarkMode = Provider.of<ThemeProvider>(context).Dark ;
     return Scaffold(
         resizeToAvoidBottomInset: true,
         bottomNavigationBar: BottomNavigationBar(
-          fixedColor: Colors.lightBlueAccent,
-          backgroundColor: Colors.grey.shade100,
+          fixedColor: DarkMode ? Colors.lightBlueAccent : Colors.lightGreenAccent,
+          backgroundColor: DarkMode ? Colors.black : Colors.grey.shade400,
           elevation: 10,
           currentIndex: _SelectedIndex,
           onTap: _BottomNavigationbar,

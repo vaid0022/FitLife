@@ -1,7 +1,7 @@
-// providers/current_user_provider.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitlife/Model/UserModel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CurrentUserProvider extends ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -49,6 +49,20 @@ class CurrentUserProvider extends ChangeNotifier {
     _currentUser = null;
     _isLoading = false;
     _error = null;
+    notifyListeners();
+  }
+}
+
+
+class ThemeProvider extends ChangeNotifier{
+
+  bool IsDarkMode = true;
+
+  bool get Dark => IsDarkMode;
+
+  void SetTheme({required bool Istheme}){
+
+    IsDarkMode = Istheme;
     notifyListeners();
   }
 }

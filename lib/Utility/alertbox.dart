@@ -14,7 +14,7 @@ class alert {
               callback: () {
                 return Navigator.pop(context);
               },
-              text: btnText,
+              text: btnText,color: Colors.blue,
             ),
           ],
         );

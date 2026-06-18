@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/check_user.dart';
 import 'package:fitlife/View/home.dart';
 import 'package:fitlife/ViewModel/navifationbar.dart';
 import 'package:flutter/material.dart';
@@ -73,7 +74,13 @@ class loginlogic {
         idToken: GoogleAuth.idToken,
       );
 
-      FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential).then(((_){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>checkuser()));
+      }));
+
+      if(account == null){
+        return;
+      }
     } catch (error) {
       ScaffoldMessenger.of(
         context,

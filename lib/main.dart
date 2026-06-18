@@ -11,7 +11,12 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform
   );
-  runApp(ChangeNotifierProvider(create: (_) => CurrentUserProvider(),child: MyApp()));
+  runApp(
+    MultiProvider(providers: [
+        ChangeNotifierProvider(create: (_) => CurrentUserProvider()),
+      ChangeNotifierProvider(create: (_) => ThemeProvider(),)
+
+    ],child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,6 +26,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FitLife',
       debugShowCheckedModeBanner: false,
+      themeMode: Provider.of<ThemeProvider>(context).Dark ? ThemeMode.dark :ThemeMode.light,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        cardTheme: CardThemeData(
+          shadowColor: Colors.lightGreen,
+        ),
+      ),
+
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        cardTheme: CardThemeData(
+          shadowColor: Colors.lightBlue,
+        ),
+
+      ),
       home: checkuser(),
     );
   }
