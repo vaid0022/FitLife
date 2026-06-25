@@ -6,7 +6,7 @@ class alert {
     return showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
+        return AlertDialog.adaptive(
           title: Text(title),
           content: Text(Decre),
           actions: [

@@ -27,7 +27,7 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
     });
   }
 
-  final List<Widget> _pages = [home(),Workoutpage(), Dietpage(),Steps()];
+  final List<Widget> _pages = [home(),Steps(),Workoutpage(), Dietpage(),];
   Widget build(BuildContext context) {
     final DarkMode = Provider.of<ThemeProvider>(context).Dark ;
     return Scaffold(
@@ -41,12 +41,13 @@ class _bottomnavigationabarState extends State<bottomnavigationabar> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.directions_walk), label: "Step"),
             BottomNavigationBarItem(icon: Icon(Icons.sports_gymnastics_sharp), label: "WorkOut"),
             BottomNavigationBarItem(
               icon: Icon(Icons.lunch_dining),
               label: "Dietplan",
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.directions_walk), label: "Step"),
+
           ],
         ),
         body: _pages[_SelectedIndex],
