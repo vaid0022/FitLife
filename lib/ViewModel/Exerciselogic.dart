@@ -2,10 +2,14 @@
 
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 
+import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:image/image.dart' as img;
 import 'package:fitlife/Model/ExerciseModel.dart';
+import 'package:path_provider/path_provider.dart';
 
 class Exerciselogic{
 static int page = 1;
@@ -17,7 +21,7 @@ static ScrollController scrollController =ScrollController();
 
   static Future<ExerciseModel> GetApi({int? pageOG})async{
 
-    String url =   "https://exercise-api.ymove.app/api/v2/exercises?muscleGroup=chest&hasVideo=true";
+    String url = "https://oss.exercisedb.dev/api/v1/exercises";
 
      Uri urll = Uri.parse(url);
     urll = urll.replace(queryParameters: {
@@ -26,9 +30,7 @@ static ScrollController scrollController =ScrollController();
       "pageSize" : "10",
     });
 
-    final response = await http.get(urll,headers: {
-      "X-API-Key" : "ym_651d440a04ca0e5308bbb1543e933088e0e0e709ed3008edfb3df68d6f2c39f8"
-    });
+    final response = await http.get(urll);
 
    if(response.statusCode == 200)
      {
@@ -60,9 +62,6 @@ static ScrollController scrollController =ScrollController();
 
         hasMoreData = false;
       }else{
-
-         hasMoreData = Exercise.pagination!.page! <
-                        Exercise.pagination!.totalPages!;
 
          AllExerciese.addAll(Exercise.data!);
       }
@@ -103,4 +102,59 @@ static ScrollController scrollController =ScrollController();
     await FetchData();
   }
 
+  static Future<String?> gifToImage({required String GifUrl})async{
+      try{
+        // convert gif into uri
+        final responce = await http.get(Uri.parse(GifUrl));
+
+        if(responce.statusCode != 200){
+          return null;
+        }
+
+        //It decode gif into bytes and store into animation
+        final animation = img.decodeGif(responce.bodyBytes);
+        if(animation == null && animation!.frames.isEmpty){
+          return null;
+        }
+
+          // It store firest frame of gif
+          final frame = animation.frames.first;
+
+        // create new image
+          final staticImage = img.Image(
+            width: frame.width,
+            height: frame.width
+          );
+
+          //copy pixels from first image
+        img.compositeImage(staticImage, frame);
+
+        //encode as normal png
+          final pngBytes = img.encodePng(staticImage,singleFrame: true);
+
+
+          //use for create and saved png
+          final Directory = await getTemporaryDirectory();
+
+          final file = File('${Directory.path}/${DateTime.now().millisecondsSinceEpoch}.png');
+          await file.writeAsBytes(pngBytes);
+          final pngImage = img.decodeImage(await file.readAsBytes());
+
+
+          print("PNG saved");
+
+
+
+          return file.path;
+
+
+      }catch(e){
+        print("ImageError = $e");
+        return null;
+
+      }
+
+
+
+  }
 }

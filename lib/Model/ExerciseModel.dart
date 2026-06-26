@@ -1,20 +1,20 @@
-/// total : 1327
-/// count : 10
-/// data : [{"id":"0001","name":"3/4 Sit-up","bodyPart":"Waist","equipment":"Body Weight","target":"Abs","secondaryMuscles":["Hip Flexors","Lower Back"],"instructions":["Lie flat on your back with your knees bent and feet flat on the ground.","Place your hands behind your head with your elbows pointing outwards.","Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.","Pause for a moment at the top, then slowly lower your upper body back down to the starting position.","Repeat for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0001.gif","category":"strength","difficulty":"beginner","mechanic":"isolation","force":"push","met":3.5,"caloriesPerMinute":4.3,"description":"3/4 Sit-up is a beginner single-joint isolation pushing exercise targeting the Abs in the Waist region. Performed using bodyweight, it falls under the strength category. Secondary muscles engaged include Hip Flexors and Lower Back.","isUnilateral":false,"popularityRank":5,"recommendedSets":"3","recommendedReps":"10-15","joint_focus":"lumbar_spine","intensity_level":"gentle","movement_tags":["beginner-friendly","controlled-movement","minimal-equipment","low-intensity","joint-friendly"]},{"id":"0002","name":"45° Side Bend","bodyPart":"Waist","equipment":"Body Weight","target":"Abs","secondaryMuscles":["Obliques"],"instructions":["Stand with your feet shoulder-width apart and your arms extended straight down by your sides.","Keeping your back straight and your core engaged, slowly bend your torso to one side, lowering your hand towards your knee.","Pause for a moment at the bottom, then slowly return to the starting position.","Repeat on the other side.","Continue alternating sides for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0002.gif","category":"strength","difficulty":"beginner","mechanic":"isolation","force":"push","met":3.5,"caloriesPerMinute":4.3,"description":"45° Side Bend is a beginner single-joint isolation pushing exercise targeting the Abs in the Waist region. Performed using bodyweight, it falls under the strength category. Secondary muscles engaged include Obliques.","isUnilateral":false,"popularityRank":5,"recommendedSets":"3","recommendedReps":"10-15","joint_focus":"lumbar_spine","intensity_level":"gentle","movement_tags":["beginner-friendly","controlled-movement","minimal-equipment","low-intensity","joint-friendly"]},{"id":"0003","name":"Air Bike","bodyPart":"Waist","equipment":"Body Weight","target":"Abs","secondaryMuscles":["Hip Flexors"],"instructions":["Lie flat on your back with your hands placed behind your head.","Lift your legs off the ground and bend your knees at a 90-degree angle.","Bring your right elbow towards your left knee while simultaneously straightening your right leg.","Return to the starting position and repeat the movement on the opposite side, bringing your left elbow towards your right knee while straightening your left leg.","Continue alternating sides in a pedaling motion for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0003.gif","category":"strength","difficulty":"beginner","mechanic":"isolation","force":"push","met":3.5,"caloriesPerMinute":4.3,"description":"Air Bike is a beginner single-joint isolation pushing exercise targeting the Abs in the Waist region. Performed using bodyweight, it falls under the strength category. Secondary muscles engaged include Hip Flexors.","isUnilateral":false,"popularityRank":5,"recommendedSets":"3","recommendedReps":"10-15","joint_focus":"lumbar_spine","intensity_level":"gentle","movement_tags":["beginner-friendly","controlled-movement","minimal-equipment","low-intensity","joint-friendly"]},{"id":"0006","name":"Alternate Heel Touchers","bodyPart":"Waist","equipment":"Body Weight","target":"Abs","secondaryMuscles":["Obliques"],"instructions":["Lie flat on your back with your knees bent and feet flat on the ground.","Extend your arms straight out to the sides, parallel to the ground.","Engaging your abs, lift your shoulders off the ground and reach your right hand towards your right heel.","Return to the starting position and repeat on the left side, reaching your left hand towards your left heel.","Continue alternating sides for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0006.gif","category":"strength","difficulty":"beginner","mechanic":"isolation","force":"push","met":3.5,"caloriesPerMinute":4.3,"description":"Alternate Heel Touchers is a beginner single-joint isolation pushing exercise targeting the Abs in the Waist region. Performed using bodyweight, it falls under the strength category. Secondary muscles engaged include Obliques.","isUnilateral":true,"popularityRank":5,"recommendedSets":"3","recommendedReps":"10-15","joint_focus":"lumbar_spine","intensity_level":"gentle","movement_tags":["beginner-friendly","controlled-movement","minimal-equipment","low-intensity","joint-friendly"]},{"id":"0007","name":"Alternate Lateral Pulldown","bodyPart":"Back","equipment":"Cable","target":"Lats","secondaryMuscles":["Biceps","Rhomboids"],"instructions":["Sit on the cable machine with your back straight and feet flat on the ground.","Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.","Lean back slightly and pull the handles towards your chest, squeezing your shoulder blades together.","Pause for a moment at the peak of the movement, then slowly release the handles back to the starting position.","Repeat for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0007.gif","category":"strength","difficulty":"intermediate","mechanic":"compound","force":"pull","met":4.5,"caloriesPerMinute":5.5,"description":"Alternate Lateral Pulldown is a intermediate multi-joint compound pulling exercise targeting the Lats in the Back region. Performed using cable, it falls under the strength category. Secondary muscles engaged include Biceps and Rhomboids.","isUnilateral":true,"popularityRank":5,"recommendedSets":"3-4","recommendedReps":"6-10","joint_focus":"shoulder","intensity_level":"moderate","movement_tags":[]},{"id":"0009","name":"Assisted Chest Dip (kneeling)","bodyPart":"Chest","equipment":"Leverage Machine","target":"Pectorals","secondaryMuscles":["Triceps","Shoulders"],"instructions":["Adjust the machine to your desired height and secure your knees on the pad.","Grasp the handles with your palms facing down and your arms fully extended.","Lower your body by bending your elbows until your upper arms are parallel to the floor.","Pause for a moment, then push yourself back up to the starting position.","Repeat for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0009.gif","category":"strength","difficulty":"beginner","mechanic":"compound","force":"push","met":4.5,"caloriesPerMinute":5.5,"description":"Assisted Chest Dip (kneeling) is a beginner multi-joint compound pushing exercise targeting the Pectorals in the Chest region. Performed using leverage machine, it falls under the strength category. Secondary muscles engaged include Triceps and Shoulders.","isUnilateral":false,"popularityRank":5,"recommendedSets":"3","recommendedReps":"8-12","joint_focus":"shoulder","intensity_level":"moderate","movement_tags":["beginner-friendly"]},{"id":"0010","name":"Assisted Hanging Knee Raise With Throw Down","bodyPart":"Waist","equipment":"Assisted","target":"Abs","secondaryMuscles":["Hip Flexors","Lower Back"],"instructions":["Hang from a pull-up bar with your arms fully extended and your palms facing away from you.","Engage your core and lift your knees towards your chest, keeping your legs together.","Once your knees are at chest level, explosively throw your legs down towards the ground, extending them fully.","Allow your legs to swing back up and repeat the movement for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0010.gif","category":"strength","difficulty":"beginner","mechanic":"compound","force":"pull","met":5,"caloriesPerMinute":6.1,"description":"Assisted Hanging Knee Raise With Throw Down is a beginner multi-joint compound pulling exercise targeting the Abs in the Waist region. Performed using assisted, it falls under the strength category. Secondary muscles engaged include Hip Flexors and Lower Back.","isUnilateral":false,"popularityRank":4,"recommendedSets":"3","recommendedReps":"8-12","joint_focus":"lumbar_spine","intensity_level":"moderate","movement_tags":["beginner-friendly","minimal-equipment"]},{"id":"0011","name":"Assisted Hanging Knee Raise","bodyPart":"Waist","equipment":"Assisted","target":"Abs","secondaryMuscles":["Hip Flexors"],"instructions":["Hang from a pull-up bar with your arms fully extended and your palms facing away from you.","Engage your core muscles and lift your knees towards your chest, bending at the hips and knees.","Pause for a moment at the top of the movement, squeezing your abs.","Slowly lower your legs back down to the starting position.","Repeat for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0011.gif","category":"strength","difficulty":"beginner","mechanic":"isolation","force":"push","met":5,"caloriesPerMinute":6.1,"description":"Assisted Hanging Knee Raise is a beginner single-joint isolation pushing exercise targeting the Abs in the Waist region. Performed using assisted, it falls under the strength category. Secondary muscles engaged include Hip Flexors.","isUnilateral":false,"popularityRank":3,"recommendedSets":"3","recommendedReps":"10-15","joint_focus":"lumbar_spine","intensity_level":"moderate","movement_tags":["beginner-friendly","controlled-movement","minimal-equipment","joint-friendly"]},{"id":"0012","name":"Assisted Lying Leg Raise With Lateral Throw Down","bodyPart":"Waist","equipment":"Assisted","target":"Abs","secondaryMuscles":["Hip Flexors","Obliques"],"instructions":["Lie flat on your back with your legs extended and your arms by your sides.","Place your hands under your glutes for support.","Engage your abs and lift your legs off the ground, keeping them straight.","While keeping your legs together, lower them to one side until they are a few inches above the ground.","Pause for a moment, then lift your legs back to the starting position.","Repeat the movement to the other side.","Continue alternating sides for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0012.gif","category":"strength","difficulty":"beginner","mechanic":"compound","force":"pull","met":5,"caloriesPerMinute":6.1,"description":"Assisted Lying Leg Raise With Lateral Throw Down is a beginner multi-joint compound pulling exercise targeting the Abs in the Waist region. Performed using assisted, it falls under the strength category. Secondary muscles engaged include Hip Flexors and Obliques.","isUnilateral":false,"popularityRank":4,"recommendedSets":"3","recommendedReps":"8-12","joint_focus":"lumbar_spine","intensity_level":"moderate","movement_tags":["beginner-friendly","minimal-equipment"]},{"id":"0013","name":"Assisted Lying Leg Raise With Throw Down","bodyPart":"Waist","equipment":"Assisted","target":"Abs","secondaryMuscles":["Hip Flexors","Quadriceps"],"instructions":["Lie flat on your back with your legs extended and your arms by your sides.","Place your hands under your glutes for support.","Engage your core and lift your legs off the ground, keeping them straight.","Raise your legs until they are perpendicular to the ground.","Lower your legs back down to the starting position.","Simultaneously, throw your legs down towards the ground, keeping them straight.","Raise your legs back up to the starting position.","Repeat for the desired number of repetitions."],"gifUrl":"https://api.workoutxapp.com/v1/gifs/0013.gif","category":"strength","difficulty":"beginner","mechanic":"compound","force":"pull","met":5,"caloriesPerMinute":6.1,"description":"Assisted Lying Leg Raise With Throw Down is a beginner multi-joint compound pulling exercise targeting the Abs in the Waist region. Performed using assisted, it falls under the strength category. Secondary muscles engaged include Hip Flexors and Quadriceps.","isUnilateral":false,"popularityRank":4,"recommendedSets":"3","recommendedReps":"8-12","joint_focus":"lumbar_spine","intensity_level":"moderate","movement_tags":["beginner-friendly","minimal-equipment"]}]
+/// success : true
+/// meta : {"total":1500,"hasNextPage":true,"hasPreviousPage":false,"nextCursor":"0JtKWum"}
+/// data : [{"exerciseId":"01qpYSe","name":"upward facing dog","gifUrl":"https://static.exercisedb.dev/media/01qpYSe.gif","bodyParts":["back"],"equipments":["body weight"],"targetMuscles":["spine"],"secondaryMuscles":["shoulders","chest"],"instructions":["Step:1 Lie face down on the floor with your legs extended behind you.","Step:2 Place your hands on the floor next to your lower ribs, fingers pointing forward.","Step:3 Press your hands firmly into the floor and straighten your arms, lifting your torso and thighs off the ground.","Step:4 Roll your shoulders back and down, opening your chest and lifting your gaze towards the ceiling.","Step:5 Hold this position for a few breaths, then slowly lower your body back down to the starting position.","Step:6 Repeat for the desired number of repetitions."]},{"exerciseId":"03lzqwk","name":"assisted hanging knee raise","gifUrl":"https://static.exercisedb.dev/media/03lzqwk.gif","bodyParts":["waist"],"equipments":["assisted"],"targetMuscles":["abs"],"secondaryMuscles":["hip flexors"],"instructions":["Step:1 Hang from a pull-up bar with your arms fully extended and your palms facing away from you.","Step:2 Engage your core muscles and lift your knees towards your chest, bending at the hips and knees.","Step:3 Pause for a moment at the top of the movement, squeezing your abs.","Step:4 Slowly lower your legs back down to the starting position.","Step:5 Repeat for the desired number of repetitions."]},{"exerciseId":"05Cf2v8","name":"impossible dips","gifUrl":"https://static.exercisedb.dev/media/05Cf2v8.gif","bodyParts":["upper arms"],"equipments":["body weight"],"targetMuscles":["triceps"],"secondaryMuscles":["chest","shoulders"],"instructions":["Step:1 Position yourself between two parallel bars with your arms fully extended and your body suspended in the air.","Step:2 Bend your knees and cross your ankles.","Step:3 Lower your body by bending your elbows until your upper arms are parallel to the ground.","Step:4 Pause for a moment, then push yourself back up to the starting position by straightening your arms.","Step:5 Repeat for the desired number of repetitions."]},{"exerciseId":"0br45wL","name":"push-up inside leg kick","gifUrl":"https://static.exercisedb.dev/media/0br45wL.gif","bodyParts":["upper legs"],"equipments":["body weight"],"targetMuscles":["glutes"],"secondaryMuscles":["quadriceps","hamstrings","calves","core"],"instructions":["Step:1 Start in a push-up position with your hands slightly wider than shoulder-width apart and your feet together.","Step:2 Lower your body towards the ground by bending your elbows, keeping your back straight and your core engaged.","Step:3 As you push back up, lift one leg off the ground and kick it out to the side, keeping it straight.","Step:4 Lower your leg back down and repeat the push-up, then switch to the other leg.","Step:5 Continue alternating leg kicks with each push-up repetition."]},{"exerciseId":"0CXGHya","name":"cable cross-over variation","gifUrl":"https://static.exercisedb.dev/media/0CXGHya.gif","bodyParts":["chest"],"equipments":["cable"],"targetMuscles":["pectorals"],"secondaryMuscles":["deltoids","triceps"],"instructions":["Step:1 Adjust the cable pulleys to chest height.","Step:2 Stand in the center of the cable machine with one foot in front of the other.","Step:3 Grasp the handles with your palms facing down and your arms extended out to the sides.","Step:4 Take a step forward, keeping your arms slightly bent.","Step:5 With a slight bend in your elbows, bring your hands together in front of your chest.","Step:6 Pause for a moment, then slowly return your arms back to the starting position.","Step:7 Repeat for the desired number of repetitions."]},{"exerciseId":"0dCyly0","name":"barbell seated bradford rocky press","gifUrl":"https://static.exercisedb.dev/media/0dCyly0.gif","bodyParts":["shoulders"],"equipments":["barbell"],"targetMuscles":["delts"],"secondaryMuscles":["triceps","upper back"],"instructions":["Step:1 Sit on a bench with your back straight and feet flat on the ground.","Step:2 Hold the barbell with an overhand grip, slightly wider than shoulder-width apart.","Step:3 Lift the barbell to shoulder height, keeping your elbows slightly bent and pointing forward.","Step:4 Press the barbell overhead, fully extending your arms.","Step:5 Lower the barbell back to shoulder height and repeat for the desired number of repetitions."]},{"exerciseId":"0I5fUyn","name":"band underhand pulldown with classic","gifUrl":"https://static.exercisedb.dev/media/0I5fUyn.gif","bodyParts":["back"],"equipments":["band"],"targetMuscles":["lats"],"secondaryMuscles":["biceps","forearms"],"instructions":["Step:1 Attach the band to a high anchor point, such as a pull-up bar or sturdy beam.","Step:2 Stand facing the anchor point with your feet shoulder-width apart.","Step:3 Grasp the band with an underhand grip, hands slightly wider than shoulder-width apart. Emphasize classic control.","Step:4 Extend your arms fully overhead, keeping your elbows slightly bent.","Step:5 Engage your lats and pull the band down towards your chest, squeezing your shoulder blades together.","Step:6 Pause for a moment at the bottom of the movement, then slowly release the tension and return to the starting position.","Step:7 Repeat for the desired number of repetitions."]},{"exerciseId":"0IgNjSM","name":"dumbbell standing reverse curl","gifUrl":"https://static.exercisedb.dev/media/0IgNjSM.gif","bodyParts":["upper arms"],"equipments":["dumbbell"],"targetMuscles":["biceps"],"secondaryMuscles":["forearms"],"instructions":["Step:1 Stand up straight with your feet shoulder-width apart and hold a dumbbell in each hand, palms facing your body.","Step:2 Keeping your upper arms stationary, exhale and curl the weights while contracting your biceps. Continue to raise the weights until your biceps are fully contracted and the dumbbells are at shoulder level.","Step:3 Hold the contracted position for a brief pause as you squeeze your biceps.","Step:4 Inhale and slowly begin to lower the dumbbells back to the starting position.","Step:5 Repeat for the desired number of repetitions."]},{"exerciseId":"0jp9Rlz","name":"one leg floor calf raise","gifUrl":"https://static.exercisedb.dev/media/0jp9Rlz.gif","bodyParts":["lower legs"],"equipments":["body weight"],"targetMuscles":["calves"],"secondaryMuscles":["ankles","feet"],"instructions":["Step:1 Stand with your feet hip-width apart and place your hands on a wall or sturdy object for balance.","Step:2 Lift one foot off the ground and balance on the other foot.","Step:3 Slowly raise your heel off the ground, lifting your body up onto the ball of your foot.","Step:4 Pause for a moment at the top, then slowly lower your heel back down to the starting position.","Step:5 Repeat for the desired number of repetitions, then switch legs and repeat."]},{"exerciseId":"0JtKWum","name":"dumbbell burpee","gifUrl":"https://static.exercisedb.dev/media/0JtKWum.gif","bodyParts":["cardio"],"equipments":["dumbbell"],"targetMuscles":["cardiovascular system"],"secondaryMuscles":["quadriceps","hamstrings","calves","shoulders","triceps","core"],"instructions":["Step:1 Start in a standing position with your feet shoulder-width apart and a dumbbell in each hand.","Step:2 Lower your body into a squat position, placing the dumbbells on the ground in front of you.","Step:3 Kick your feet back into a push-up position, keeping your body in a straight line.","Step:4 Perform a push-up, bending your elbows and lowering your chest towards the ground.","Step:5 Jump your feet back towards your hands, landing in a squat position.","Step:6 Stand up explosively, lifting the dumbbells off the ground and bringing them to your shoulders.","Step:7 Press the dumbbells overhead, fully extending your arms.","Step:8 Lower the dumbbells back to your shoulders and repeat the entire sequence for the desired number of repetitions."]}]
 
 class ExerciseModel {
   ExerciseModel({
-      num? total, 
-      num? count, 
+      bool? success, 
+      Meta? meta, 
       List<Data>? data,}){
-    _total = total;
-    _count = count;
+    _success = success;
+    _meta = meta;
     _data = data;
 }
 
   ExerciseModel.fromJson(dynamic json) {
-    _total = json['total'];
-    _count = json['count'];
+    _success = json['success'];
+    _meta = json['meta'] != null ? Meta.fromJson(json['meta']) : null;
     if (json['data'] != null) {
       _data = [];
       json['data'].forEach((v) {
@@ -22,24 +22,26 @@ class ExerciseModel {
       });
     }
   }
-  num? _total;
-  num? _count;
+  bool? _success;
+  Meta? _meta;
   List<Data>? _data;
-ExerciseModel copyWith({  num? total,
-  num? count,
+ExerciseModel copyWith({  bool? success,
+  Meta? meta,
   List<Data>? data,
-}) => ExerciseModel(  total: total ?? _total,
-  count: count ?? _count,
+}) => ExerciseModel(  success: success ?? _success,
+  meta: meta ?? _meta,
   data: data ?? _data,
 );
-  num? get total => _total;
-  num? get count => _count;
+  bool? get success => _success;
+  Meta? get meta => _meta;
   List<Data>? get data => _data;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['total'] = _total;
-    map['count'] = _count;
+    map['success'] = _success;
+    if (_meta != null) {
+      map['meta'] = _meta?.toJson();
+    }
     if (_data != null) {
       map['data'] = _data?.map((v) => v.toJson()).toList();
     }
@@ -48,215 +50,141 @@ ExerciseModel copyWith({  num? total,
 
 }
 
-/// id : "0001"
-/// name : "3/4 Sit-up"
-/// bodyPart : "Waist"
-/// equipment : "Body Weight"
-/// target : "Abs"
-/// secondaryMuscles : ["Hip Flexors","Lower Back"]
-/// instructions : ["Lie flat on your back with your knees bent and feet flat on the ground.","Place your hands behind your head with your elbows pointing outwards.","Engaging your abs, slowly lift your upper body off the ground, curling forward until your torso is at a 45-degree angle.","Pause for a moment at the top, then slowly lower your upper body back down to the starting position.","Repeat for the desired number of repetitions."]
-/// gifUrl : "https://api.workoutxapp.com/v1/gifs/0001.gif"
-/// category : "strength"
-/// difficulty : "beginner"
-/// mechanic : "isolation"
-/// force : "push"
-/// met : 3.5
-/// caloriesPerMinute : 4.3
-/// description : "3/4 Sit-up is a beginner single-joint isolation pushing exercise targeting the Abs in the Waist region. Performed using bodyweight, it falls under the strength category. Secondary muscles engaged include Hip Flexors and Lower Back."
-/// isUnilateral : false
-/// popularityRank : 5
-/// recommendedSets : "3"
-/// recommendedReps : "10-15"
-/// joint_focus : "lumbar_spine"
-/// intensity_level : "gentle"
-/// movement_tags : ["beginner-friendly","controlled-movement","minimal-equipment","low-intensity","joint-friendly"]
+/// exerciseId : "01qpYSe"
+/// name : "upward facing dog"
+/// gifUrl : "https://static.exercisedb.dev/media/01qpYSe.gif"
+/// bodyParts : ["back"]
+/// equipments : ["body weight"]
+/// targetMuscles : ["spine"]
+/// secondaryMuscles : ["shoulders","chest"]
+/// instructions : ["Step:1 Lie face down on the floor with your legs extended behind you.","Step:2 Place your hands on the floor next to your lower ribs, fingers pointing forward.","Step:3 Press your hands firmly into the floor and straighten your arms, lifting your torso and thighs off the ground.","Step:4 Roll your shoulders back and down, opening your chest and lifting your gaze towards the ceiling.","Step:5 Hold this position for a few breaths, then slowly lower your body back down to the starting position.","Step:6 Repeat for the desired number of repetitions."]
 
 class Data {
   Data({
-      String? id, 
+      String? exerciseId, 
       String? name, 
-      String? bodyPart, 
-      String? equipment, 
-      String? target, 
-      List<String>? secondaryMuscles, 
-      List<String>? instructions, 
       String? gifUrl, 
-      String? category, 
-      String? difficulty, 
-      String? mechanic, 
-      String? force, 
-      num? met, 
-      num? caloriesPerMinute, 
-      String? description, 
-      bool? isUnilateral, 
-      num? popularityRank, 
-      String? recommendedSets, 
-      String? recommendedReps, 
-      String? jointFocus, 
-      String? intensityLevel, 
-      List<String>? movementTags,}){
-    _id = id;
+      List<String>? bodyParts, 
+      List<String>? equipments, 
+      List<String>? targetMuscles, 
+      List<String>? secondaryMuscles, 
+      List<String>? instructions,}){
+    _exerciseId = exerciseId;
     _name = name;
-    _bodyPart = bodyPart;
-    _equipment = equipment;
-    _target = target;
+    _gifUrl = gifUrl;
+    _bodyParts = bodyParts;
+    _equipments = equipments;
+    _targetMuscles = targetMuscles;
     _secondaryMuscles = secondaryMuscles;
     _instructions = instructions;
-    _gifUrl = gifUrl;
-    _category = category;
-    _difficulty = difficulty;
-    _mechanic = mechanic;
-    _force = force;
-    _met = met;
-    _caloriesPerMinute = caloriesPerMinute;
-    _description = description;
-    _isUnilateral = isUnilateral;
-    _popularityRank = popularityRank;
-    _recommendedSets = recommendedSets;
-    _recommendedReps = recommendedReps;
-    _jointFocus = jointFocus;
-    _intensityLevel = intensityLevel;
-    _movementTags = movementTags;
 }
 
   Data.fromJson(dynamic json) {
-    _id = json['id'];
+    _exerciseId = json['exerciseId'];
     _name = json['name'];
-    _bodyPart = json['bodyPart'];
-    _equipment = json['equipment'];
-    _target = json['target'];
+    _gifUrl = json['gifUrl'];
+    _bodyParts = json['bodyParts'] != null ? json['bodyParts'].cast<String>() : [];
+    _equipments = json['equipments'] != null ? json['equipments'].cast<String>() : [];
+    _targetMuscles = json['targetMuscles'] != null ? json['targetMuscles'].cast<String>() : [];
     _secondaryMuscles = json['secondaryMuscles'] != null ? json['secondaryMuscles'].cast<String>() : [];
     _instructions = json['instructions'] != null ? json['instructions'].cast<String>() : [];
-    _gifUrl = json['gifUrl'];
-    _category = json['category'];
-    _difficulty = json['difficulty'];
-    _mechanic = json['mechanic'];
-    _force = json['force'];
-    _met = json['met'];
-    _caloriesPerMinute = json['caloriesPerMinute'];
-    _description = json['description'];
-    _isUnilateral = json['isUnilateral'];
-    _popularityRank = json['popularityRank'];
-    _recommendedSets = json['recommendedSets'];
-    _recommendedReps = json['recommendedReps'];
-    _jointFocus = json['joint_focus'];
-    _intensityLevel = json['intensity_level'];
-    _movementTags = json['movement_tags'] != null ? json['movement_tags'].cast<String>() : [];
   }
-  String? _id;
+  String? _exerciseId;
   String? _name;
-  String? _bodyPart;
-  String? _equipment;
-  String? _target;
+  String? _gifUrl;
+  List<String>? _bodyParts;
+  List<String>? _equipments;
+  List<String>? _targetMuscles;
   List<String>? _secondaryMuscles;
   List<String>? _instructions;
-  String? _gifUrl;
-  String? _category;
-  String? _difficulty;
-  String? _mechanic;
-  String? _force;
-  num? _met;
-  num? _caloriesPerMinute;
-  String? _description;
-  bool? _isUnilateral;
-  num? _popularityRank;
-  String? _recommendedSets;
-  String? _recommendedReps;
-  String? _jointFocus;
-  String? _intensityLevel;
-  List<String>? _movementTags;
-Data copyWith({  String? id,
+Data copyWith({  String? exerciseId,
   String? name,
-  String? bodyPart,
-  String? equipment,
-  String? target,
+  String? gifUrl,
+  List<String>? bodyParts,
+  List<String>? equipments,
+  List<String>? targetMuscles,
   List<String>? secondaryMuscles,
   List<String>? instructions,
-  String? gifUrl,
-  String? category,
-  String? difficulty,
-  String? mechanic,
-  String? force,
-  num? met,
-  num? caloriesPerMinute,
-  String? description,
-  bool? isUnilateral,
-  num? popularityRank,
-  String? recommendedSets,
-  String? recommendedReps,
-  String? jointFocus,
-  String? intensityLevel,
-  List<String>? movementTags,
-}) => Data(  id: id ?? _id,
+}) => Data(  exerciseId: exerciseId ?? _exerciseId,
   name: name ?? _name,
-  bodyPart: bodyPart ?? _bodyPart,
-  equipment: equipment ?? _equipment,
-  target: target ?? _target,
+  gifUrl: gifUrl ?? _gifUrl,
+  bodyParts: bodyParts ?? _bodyParts,
+  equipments: equipments ?? _equipments,
+  targetMuscles: targetMuscles ?? _targetMuscles,
   secondaryMuscles: secondaryMuscles ?? _secondaryMuscles,
   instructions: instructions ?? _instructions,
-  gifUrl: gifUrl ?? _gifUrl,
-  category: category ?? _category,
-  difficulty: difficulty ?? _difficulty,
-  mechanic: mechanic ?? _mechanic,
-  force: force ?? _force,
-  met: met ?? _met,
-  caloriesPerMinute: caloriesPerMinute ?? _caloriesPerMinute,
-  description: description ?? _description,
-  isUnilateral: isUnilateral ?? _isUnilateral,
-  popularityRank: popularityRank ?? _popularityRank,
-  recommendedSets: recommendedSets ?? _recommendedSets,
-  recommendedReps: recommendedReps ?? _recommendedReps,
-  jointFocus: jointFocus ?? _jointFocus,
-  intensityLevel: intensityLevel ?? _intensityLevel,
-  movementTags: movementTags ?? _movementTags,
 );
-  String? get id => _id;
+  String? get exerciseId => _exerciseId;
   String? get name => _name;
-  String? get bodyPart => _bodyPart;
-  String? get equipment => _equipment;
-  String? get target => _target;
+  String? get gifUrl => _gifUrl;
+  List<String>? get bodyParts => _bodyParts;
+  List<String>? get equipments => _equipments;
+  List<String>? get targetMuscles => _targetMuscles;
   List<String>? get secondaryMuscles => _secondaryMuscles;
   List<String>? get instructions => _instructions;
-  String? get gifUrl => _gifUrl;
-  String? get category => _category;
-  String? get difficulty => _difficulty;
-  String? get mechanic => _mechanic;
-  String? get force => _force;
-  num? get met => _met;
-  num? get caloriesPerMinute => _caloriesPerMinute;
-  String? get description => _description;
-  bool? get isUnilateral => _isUnilateral;
-  num? get popularityRank => _popularityRank;
-  String? get recommendedSets => _recommendedSets;
-  String? get recommendedReps => _recommendedReps;
-  String? get jointFocus => _jointFocus;
-  String? get intensityLevel => _intensityLevel;
-  List<String>? get movementTags => _movementTags;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
+    map['exerciseId'] = _exerciseId;
     map['name'] = _name;
-    map['bodyPart'] = _bodyPart;
-    map['equipment'] = _equipment;
-    map['target'] = _target;
+    map['gifUrl'] = _gifUrl;
+    map['bodyParts'] = _bodyParts;
+    map['equipments'] = _equipments;
+    map['targetMuscles'] = _targetMuscles;
     map['secondaryMuscles'] = _secondaryMuscles;
     map['instructions'] = _instructions;
-    map['gifUrl'] = _gifUrl;
-    map['category'] = _category;
-    map['difficulty'] = _difficulty;
-    map['mechanic'] = _mechanic;
-    map['force'] = _force;
-    map['met'] = _met;
-    map['caloriesPerMinute'] = _caloriesPerMinute;
-    map['description'] = _description;
-    map['isUnilateral'] = _isUnilateral;
-    map['popularityRank'] = _popularityRank;
-    map['recommendedSets'] = _recommendedSets;
-    map['recommendedReps'] = _recommendedReps;
-    map['joint_focus'] = _jointFocus;
-    map['intensity_level'] = _intensityLevel;
-    map['movement_tags'] = _movementTags;
+    return map;
+  }
+
+}
+
+/// total : 1500
+/// hasNextPage : true
+/// hasPreviousPage : false
+/// nextCursor : "0JtKWum"
+
+class Meta {
+  Meta({
+      num? total, 
+      bool? hasNextPage, 
+      bool? hasPreviousPage, 
+      String? nextCursor,}){
+    _total = total;
+    _hasNextPage = hasNextPage;
+    _hasPreviousPage = hasPreviousPage;
+    _nextCursor = nextCursor;
+}
+
+  Meta.fromJson(dynamic json) {
+    _total = json['total'];
+    _hasNextPage = json['hasNextPage'];
+    _hasPreviousPage = json['hasPreviousPage'];
+    _nextCursor = json['nextCursor'];
+  }
+  num? _total;
+  bool? _hasNextPage;
+  bool? _hasPreviousPage;
+  String? _nextCursor;
+Meta copyWith({  num? total,
+  bool? hasNextPage,
+  bool? hasPreviousPage,
+  String? nextCursor,
+}) => Meta(  total: total ?? _total,
+  hasNextPage: hasNextPage ?? _hasNextPage,
+  hasPreviousPage: hasPreviousPage ?? _hasPreviousPage,
+  nextCursor: nextCursor ?? _nextCursor,
+);
+  num? get total => _total;
+  bool? get hasNextPage => _hasNextPage;
+  bool? get hasPreviousPage => _hasPreviousPage;
+  String? get nextCursor => _nextCursor;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['total'] = _total;
+    map['hasNextPage'] = _hasNextPage;
+    map['hasPreviousPage'] = _hasPreviousPage;
+    map['nextCursor'] = _nextCursor;
     return map;
   }
 

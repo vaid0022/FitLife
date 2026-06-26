@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:fitlife/Model/ExerciseModel.dart';
 import 'package:fitlife/Utility/Videowidget.dart';
 import 'package:fitlife/Utility/textpadding.dart';
@@ -15,6 +17,8 @@ class Detailexercisepage extends StatefulWidget {
 class _DetailexercisepageState extends State<Detailexercisepage> {
   @override
   var Exe = Exerciselogic.AllExerciese;
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -24,13 +28,13 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
             child: Container(
               height: 500,
               width: double.infinity,
-
-              child: VideoWidget(
-                videoUrl: Exerciselogic.AllExerciese[widget.index].videoUrl
-                    .toString(),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(Exe[widget.index].gifUrl.toString()),
+                  fit: BoxFit.cover
               ),
             ),
-          ),
+          ),),
 
           SizedBox(
 
@@ -46,7 +50,7 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
                       children: [
                         textpadding.TextPadding(
                           padding: 2,
-                          text: Exe[widget.index].title.toString(),
+                          text: Exe[widget.index].name.toString(),
                           isBold: true,
                           isLines: false,
                           fontSize: 22,
@@ -54,7 +58,7 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
                         SizedBox(height: 10),
                         textpadding.TextPadding(
                           padding: 2,
-                          text: "Description: ${Exe[widget.index].description}",
+                          text: "Description: ${Exe[widget.index].instructions}",
                           isBold: false,
                           isLines: false,
                           fontSize: 17,
@@ -63,7 +67,7 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
 
                         textpadding.TextPadding(
                           padding: 2,
-                          text: "Category:${Exe[widget.index].category}",
+                          text: "Equipments:${Exe[widget.index].equipments}",
                           isBold: false,
                           isLines: false,
                           fontSize: 15,
@@ -72,7 +76,7 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
 
                         textpadding.TextPadding(
                           padding: 2,
-                          text:"Difficulty: ${Exe[widget.index].difficulty ?? "---"}",
+                          text:"Catagory: ${Exe[widget.index].bodyParts ?? "---"}",
                           isBold: false,
                           isLines: false,
                           fontSize: 15,
@@ -81,7 +85,7 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
 
                         textpadding.TextPadding(
                           padding: 2,
-                          text:"Equipment: ${Exe[widget.index].equipment}",
+                          text:"Equipment: ${Exe[widget.index].targetMuscles}",
                           isBold: false,
                           isLines: false,
                           fontSize: 15,
@@ -89,7 +93,7 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
                         SizedBox(height: 10),
                         textpadding.TextPadding(
                           padding: 2,
-                          text:"Exercise Type: ${Exe[widget.index].exerciseType}",
+                          text:"Exercise Type: ${Exe[widget.index].secondaryMuscles}",
                           isBold: false,
                           isLines: false,
                           fontSize: 17,

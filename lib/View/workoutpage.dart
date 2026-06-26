@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:fitlife/Model/ExerciseModel.dart';
 import 'package:fitlife/View/DetailExercisePage.dart';
 import 'package:fitlife/ViewModel/Exerciselogic.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +31,9 @@ class _WorkoutpageState extends State<Workoutpage> {
         setState(() {});
       }
     });
+
   }
+
 
   void dispose() {
     Exerciselogic.scrollController.dispose();
@@ -46,6 +51,7 @@ class _WorkoutpageState extends State<Workoutpage> {
               controller: Exerciselogic.scrollController,
               itemCount: Exerciselogic.AllExerciese.length + (Exerciselogic.hasMoreData ? 1 : 0),
               itemBuilder: (context, index) {
+
                 if (index == Exerciselogic.AllExerciese.length) {
                   return Center(child: CircularProgressIndicator());
                 }
@@ -70,32 +76,47 @@ class _WorkoutpageState extends State<Workoutpage> {
                             title: Column(
                                 children: [
                                  Text(
-                                        Exerciselogic.AllExerciese[index].title
+                                        Exerciselogic.AllExerciese[index].name
                                             .toString(),
                                       ),
                                   SizedBox(height: 20),
-                                  Container(
-                                    height: 300,
-                                    width: double.infinity,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(color: Colors.black,width: 1),
-                                      borderRadius: BorderRadius.circular(21),
-                                      image: DecorationImage(
-                                        image: NetworkImage(
-                                          Exerciselogic
-                                              .AllExerciese[index]
-                                              .thumbnailUrl
-                                              .toString(),
+                                  FutureBuilder<String?>(
+                                    future: Exerciselogic.gifToImage(GifUrl: Exerciselogic.AllExerciese[index].gifUrl!),
+                                    builder: (context, Snapshot) {
+                                      if(Snapshot.connectionState == ConnectionState.waiting){
+                                        return Center(child: CircularProgressIndicator(),);
+                                      }
+                                      if(!Snapshot.hasData){
+                                        return Center(
+                                          child: Container(
+                                            child: Column(
+                                              children: [
+                                                Icon(Icons.not_interested_outlined,color: Colors.red,size: 35,),
+                                                Text("oops! Image is not availabel")
+                                              ],
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      return Container(
+                                        height: 300,
+                                        width: double.infinity,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Colors.black,width: 1),
+                                          borderRadius: BorderRadius.circular(21),
+                                          image: DecorationImage(
+                                            image:FileImage(File(Snapshot.data!)),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
+                                      );
+                                    }
                                   ),
                                   SizedBox(height: 20,)
                                 ],
                               ),
                             subtitle: Text(
-                              Exerciselogic.AllExerciese[index].description
+                              Exerciselogic.AllExerciese[index].instructions
                                   .toString(),maxLines: 3,overflow: TextOverflow.ellipsis,
                             ),
                           ),
