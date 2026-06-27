@@ -1,253 +1,94 @@
-/// data : [{"id":"2b93dd53-f387-4632-92e9-2f866e62c1fb","title":"5-Minute Global Chicken Marinade","slug":"5-minute-global-chicken-marinade","description":"A lean, protein-packed marinade blending sweet, spicy, and umami flavors - ready in minutes for grilled or baked chicken. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AChicken%20Barbecue%20Sauce]","prepTimeMin":5,"cookTimeMin":15,"servings":2,"calories":364.2,"mealType":"lunch","dietTags":["high_protein","low_carb"],"cuisineType":"international","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/5-minute-global-chicken-marinade.png?width=600&format=auto&quality=80","protein":47.6,"fat":13.3,"carbs":12.4},{"id":"bf60fd79-8267-4acd-a123-e5c03359e2bf","title":"Apricot Chicken Salad","slug":"apricot-chicken-salad","description":"A protein-packed, naturally sweet salad combining tender chicken with tart apricots and crisp vegetables - ready in 15 minutes. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AApricot%20Chicken%20Salad]","prepTimeMin":10,"cookTimeMin":20,"servings":2,"calories":265.4,"mealType":"lunch","dietTags":["high_protein"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/apricot-chicken-salad.png?width=600&format=auto&quality=80","protein":26.2,"fat":3.8,"carbs":33.4},{"id":"177e6d9e-db1f-425c-b54e-a43df18bf4a6","title":"Asian Chicken Cabbage Crunch Salad","slug":"asian-chicken-cabbage-crunch-salad","description":"A protein-packed, crunchy salad with shredded cabbage, grilled chicken, and a tangy sesame-ginger dressing - ready in 15 minutes. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AChicken%20Cabbage%20Salad]","prepTimeMin":10,"cookTimeMin":12,"servings":2,"calories":511.6,"mealType":"lunch","dietTags":["high_protein","low_carb"],"cuisineType":"asian","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/asian-chicken-cabbage-crunch-salad.png?width=600&format=auto&quality=80","protein":42.4,"fat":29.6,"carbs":21},{"id":"1286dca6-c0fc-4a8d-8cba-92c02d8d2ffb","title":"Asian Ginger Chicken Salad","slug":"asian-ginger-chicken-salad","description":"Quick, protein-packed salad with crisp vegetables, grilled chicken, and a sesame-ginger dressing - ready in 15 minutes. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AAsian-Inspired%20Chicken%20Salad]","prepTimeMin":10,"cookTimeMin":5,"servings":2,"calories":373.3,"mealType":"lunch","dietTags":["high_protein","low_carb","mediterranean","paleo"],"cuisineType":"asian","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/asian-ginger-chicken-salad.png?width=600&format=auto&quality=80","protein":36.5,"fat":17.8,"carbs":21.4},{"id":"02e0eea0-ae06-4733-80d5-01ff7d45be04","title":"Asian-Style Crispy Chicken Wings","slug":"asian-style-crispy-chicken-wings","description":"Protein-packed, oven-baked chicken wings glazed with savory Asian flavors - ready in under 30 minutes for meal prep or game day. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AChicken%20Wings%20Asian%20Style]","prepTimeMin":10,"cookTimeMin":20,"servings":2,"calories":995,"mealType":"lunch","dietTags":["high_protein","mediterranean"],"cuisineType":"asian","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/asian-style-crispy-chicken-wings.png?width=600&format=auto&quality=80","protein":71.1,"fat":59.6,"carbs":38.5},{"id":"d17fd703-0d73-43f1-9855-7c89a4cb97c6","title":"Bacon-Wrapped Chicken Bites","slug":"bacon-wrapped-chicken-bites","description":"Protein-packed chicken cubes wrapped in bacon and air-fried until crispy - a high-protein snack ready in 30 minutes. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AKipspek%20(Bacon-wrapped%20Chicken)]","prepTimeMin":10,"cookTimeMin":18,"servings":2,"calories":777.4,"mealType":"snack","dietTags":["high_protein","low_carb","keto"],"cuisineType":"caribbean","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/bacon-wrapped-chicken-bites.png?width=600&format=auto&quality=80","protein":77.6,"fat":48.5,"carbs":2.2},{"id":"d3376f91-fd00-4afb-8741-f275a8fa5e0e","title":"Basil Walnut Pesto Chicken Linguine","slug":"basil-walnut-pesto-chicken-linguine","description":"Linguine tossed with homemade basil walnut pesto and grilled chicken breast.","prepTimeMin":10,"cookTimeMin":15,"servings":1,"calories":799.5,"mealType":"lunch","dietTags":["high_protein","keto","low_carb","mediterranean"],"cuisineType":"italian","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/basil-walnut-pesto-chicken-linguine.png?width=600&format=auto&quality=80","protein":43.4,"fat":67.7,"carbs":6.3},{"id":"579f4664-0ca0-4db0-9e8a-9a61a11458ac","title":"BBQ Pulled Chicken","slug":"bbq-pulled-chicken","description":"Tender shredded chicken breast simmered in tangy barbecue sauce. Perfect for sandwiches or bowls, this high-protein meal is ideal for batch cooking.","prepTimeMin":10,"cookTimeMin":40,"servings":8,"calories":342.2,"mealType":"dinner","dietTags":["high_protein","low_carb"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/bbq-pulled-chicken.png?width=600&format=auto&quality=80","protein":35,"fat":19,"carbs":5.8},{"id":"0406bce3-e808-4ebd-8dd3-eeded0e5f5be","title":"BBQ Pulled Chicken Stuffed Sweet Potatoes","slug":"bbq-pulled-chicken-stuffed-sweet-potatoes","description":"Tender pulled chicken breast in tangy BBQ sauce piled high on baked sweet potatoes. A satisfying combination of lean protein and complex carbs.","prepTimeMin":10,"cookTimeMin":50,"servings":4,"calories":483.7,"mealType":"lunch","dietTags":["high_protein"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/bbq-pulled-chicken-stuffed-sweet-potatoes.png?width=600&format=auto&quality=80","protein":51.3,"fat":14.8,"carbs":34.3},{"id":"62dc6e4b-b279-4670-9eaf-3cf1669939c3","title":"BBQ Pulled Chicken Sweet Potato","slug":"bbq-pulled-chicken-sweet-potato","description":"Tender pulled chicken in tangy BBQ sauce over roasted sweet potatoes. A satisfying comfort food lunch with complex carbs and lean protein.","prepTimeMin":5,"cookTimeMin":25,"servings":4,"calories":305.4,"mealType":"lunch","dietTags":["high_protein"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/bbq-pulled-chicken-sweet-potato.png?width=600&format=auto&quality=80","protein":40.6,"fat":4.6,"carbs":23.1},{"id":"9a8e0974-27a9-4caf-bd11-19eb881d4f8f","title":"Black Bean and Chicken Enchiladas","slug":"black-bean-and-chicken-enchiladas","description":"Rolled corn tortillas filled with seasoned chicken and black beans, topped with red enchilada sauce and cheese.","prepTimeMin":10,"cookTimeMin":25,"servings":1,"calories":919.5,"mealType":"dinner","dietTags":["high_protein","mediterranean"],"cuisineType":"mexican","difficulty":"medium","imageUrl":"https://ymove-recipes.b-cdn.net/black-bean-and-chicken-enchiladas.png?width=600&format=auto&quality=80","protein":61.3,"fat":20.7,"carbs":125.8},{"id":"da274395-ceb8-481b-8d5c-543a9412d9ac","title":"Black Bean Chicken Burrito","slug":"black-bean-chicken-burrito","description":"Seasoned chicken and black beans wrapped with rice and salsa in a large tortilla.","prepTimeMin":5,"cookTimeMin":20,"servings":1,"calories":1109.1,"mealType":"lunch","dietTags":["high_protein"],"cuisineType":"mexican","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/black-bean-chicken-burrito.png?width=600&format=auto&quality=80","protein":63.3,"fat":20.6,"carbs":168.1},{"id":"d54205b2-634e-4d48-8d26-822cce0c7c99","title":"Blackened Chicken Chopped Salad","slug":"blackened-chicken-chopped-salad","description":"Cajun-spiced chicken breast over chopped romaine with avocado, corn, black beans, and ranch dressing.","prepTimeMin":8,"cookTimeMin":12,"servings":1,"calories":929.5,"mealType":"lunch","dietTags":["high_protein","mediterranean"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/blackened-chicken-chopped-salad.png?width=600&format=auto&quality=80","protein":64.7,"fat":39.6,"carbs":85.6},{"id":"d22053cf-ae5c-42b8-b582-1df1923ef6cf","title":"Buffalo Chicken and Celery Slaw","slug":"buffalo-chicken-and-celery-slaw","description":"Spicy grilled chicken breast over crunchy celery slaw with blue cheese dressing.","prepTimeMin":8,"cookTimeMin":12,"servings":1,"calories":449.2,"mealType":"dinner","dietTags":["high_protein","low_carb","keto"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/buffalo-chicken-and-celery-slaw.png?width=600&format=auto&quality=80","protein":37.6,"fat":27.5,"carbs":12.2},{"id":"8ceda474-3e07-47d5-ac21-96c086be787e","title":"Buffalo Chicken Lettuce Cups","slug":"buffalo-chicken-lettuce-cups","description":"Spicy shredded chicken served in crisp lettuce leaves for a low-carb, high-protein lunch. Light yet incredibly satisfying.","prepTimeMin":10,"cookTimeMin":20,"servings":2,"calories":424.9,"mealType":"lunch","dietTags":["high_protein","low_carb"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/buffalo-chicken-lettuce-cups.png?width=600&format=auto&quality=80","protein":53.1,"fat":13.7,"carbs":20.9},{"id":"cec054a9-92f4-4f21-9a6d-01043fa8b358","title":"Buffalo Chicken Lettuce Wraps","slug":"buffalo-chicken-lettuce-wraps","description":"Spicy shredded chicken wrapped in crisp lettuce leaves with a creamy blue cheese drizzle. A low-carb, high-protein lunch that's ready in minutes.","prepTimeMin":10,"cookTimeMin":15,"servings":4,"calories":268.8,"mealType":"lunch","dietTags":["high_protein","low_carb","mediterranean"],"cuisineType":"american","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/buffalo-chicken-lettuce-wraps.png?width=600&format=auto&quality=80","protein":32.9,"fat":11.7,"carbs":8.2},{"id":"63c08542-3fc2-479e-92f3-5cdc6a64be04","title":"Butter Chicken (Keto Version)","slug":"butter-chicken-keto-version","description":"Rich and creamy tomato-based chicken curry without added sugar. Made with butter, cream, and aromatic spices.","prepTimeMin":20,"cookTimeMin":35,"servings":4,"calories":593.2,"mealType":"dinner","dietTags":["high_protein","keto","low_carb"],"cuisineType":"indian","difficulty":"medium","imageUrl":"https://ymove-recipes.b-cdn.net/butter-chicken-keto-version.png?width=600&format=auto&quality=80","protein":37.9,"fat":42.7,"carbs":16.1},{"id":"2bea87cf-f26a-4481-ae5d-ec28b4561a15","title":"Butter-Glazed Fried Chicken","slug":"butter-glazed-fried-chicken","description":"Crispy, protein-packed Indonesian-inspired fried chicken with a light butter glaze - ready in 35 minutes. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AAyam%20Goreng%20Mentega%20(Fried%20Chicken%20in%20Sweet%20Butter%20Sauce)]","prepTimeMin":20,"cookTimeMin":15,"servings":2,"calories":561.6,"mealType":"lunch","dietTags":["high_protein","low_carb","keto"],"cuisineType":"asian","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/butter-glazed-fried-chicken.png?width=600&format=auto&quality=80","protein":68.8,"fat":26.2,"carbs":10.1},{"id":"895edd03-f34d-4221-ac46-f64a8af343a5","title":"Cassava & Chicken Bowl","slug":"cassava-chicken-bowl","description":"A protein-rich West African comfort dish pairing creamy cassava with spiced chicken soup - filling, nutrient-dense, and ready in under an hour. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3ADumboy%20and%20Pepper%20Soup]","prepTimeMin":15,"cookTimeMin":35,"servings":2,"calories":772.2,"mealType":"lunch","dietTags":["high_protein"],"cuisineType":"caribbean","difficulty":"easy","imageUrl":"https://ymove-recipes.b-cdn.net/cassava-chicken-bowl.png?width=600&format=auto&quality=80","protein":58.8,"fat":8.1,"carbs":114.2},{"id":"54ae2d82-2d9a-4cbd-a5dd-db781ec2c072","title":"Cheese and Poblano Stuffed Chicken","slug":"cheese-and-poblano-stuffed-chicken","description":"Juicy chicken breasts stuffed with roasted poblanos and melted cheese in a creamy sauce. An elegant low-carb dinner option.","prepTimeMin":25,"cookTimeMin":35,"servings":4,"calories":961.5,"mealType":"lunch","dietTags":["low_carb","high_protein","keto"],"cuisineType":"mexican","difficulty":"medium","imageUrl":"https://ymove-recipes.b-cdn.net/cheese-and-poblano-stuffed-chicken.png?width=600&format=auto&quality=80","protein":59.2,"fat":78.2,"carbs":5}]
-/// pagination : {"page":1,"pageSize":20,"total":226,"totalPages":12}
+/// meals : [{"strMeal":"Air fryer patatas bravas","strMealThumb":"https://www.themealdb.com/images/media/meals/3m8yae1763257951.jpg","idMeal":"53158","strArea":"Spanish","strCountry":"Spain"},{"strMeal":"Algerian Flafla (Bell Pepper Salad)","strMealThumb":"https://www.themealdb.com/images/media/meals/tbj1bs1764118062.jpg","idMeal":"53288","strArea":"Algerian","strCountry":"Algeria"},{"strMeal":"Aubergine & hummus grills","strMealThumb":"https://www.themealdb.com/images/media/meals/zub3s91764110535.jpg","idMeal":"53278","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Aubergine couscous salad","strMealThumb":"https://www.themealdb.com/images/media/meals/02s6gc1763799560.jpg","idMeal":"53267","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Avocado dip with new potatoes","strMealThumb":"https://www.themealdb.com/images/media/meals/flrajf1762341295.jpg","idMeal":"53107","strArea":"Australian","strCountry":"Australia"},{"strMeal":"Baingan Bharta","strMealThumb":"https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg","idMeal":"52807","strArea":"India","strCountry":"India"},{"strMeal":"Beetroot & red cabbage sauerkraut","strMealThumb":"https://www.themealdb.com/images/media/meals/ra2k8a1764365055.jpg","idMeal":"53307","strArea":"Polish","strCountry":"Poland"},{"strMeal":"Beetroot latkes","strMealThumb":"https://www.themealdb.com/images/media/meals/qwicc91764368097.jpg","idMeal":"53313","strArea":"Ukrainian","strCountry":"Ukraine"},{"strMeal":"Beetroot Soup (Borscht)","strMealThumb":"https://www.themealdb.com/images/media/meals/zadvgb1699012544.jpg","idMeal":"53078","strArea":"Ukrainian","strCountry":"Ukraine"},{"strMeal":"Braised stuffed cabbage","strMealThumb":"https://www.themealdb.com/images/media/meals/z267f71764364072.jpg","idMeal":"53305","strArea":"Polish","strCountry":"Poland"},{"strMeal":"Cabbage Soup (Shchi)","strMealThumb":"https://www.themealdb.com/images/media/meals/60oc3k1699009846.jpg","idMeal":"53077","strArea":"Russian","strCountry":"Russia"},{"strMeal":"Chickpea Fajitas","strMealThumb":"https://www.themealdb.com/images/media/meals/tvtxpq1511464705.jpg","idMeal":"52870","strArea":"Mexican","strCountry":"Mexico"},{"strMeal":"Chinese Tomato Egg Stir Fry","strMealThumb":"https://www.themealdb.com/images/media/meals/rwvw8q1765660071.jpg","idMeal":"53372","strArea":"Chinese","strCountry":"China"},{"strMeal":"Chtitha Batata (Algerian Potato Stew)","strMealThumb":"https://www.themealdb.com/images/media/meals/q8pu1k1764114334.jpg","idMeal":"53283","strArea":"Algerian","strCountry":"Algeria"},{"strMeal":"Crispy Eggplant","strMealThumb":"https://www.themealdb.com/images/media/meals/c7lzrl1683208757.jpg","idMeal":"53072","strArea":"Filipino","strCountry":"Philippines"},{"strMeal":"Cucumber & fennel salad","strMealThumb":"https://www.themealdb.com/images/media/meals/ei21r61764365935.jpg","idMeal":"53309","strArea":"Polish","strCountry":"Poland"},{"strMeal":"Dal fry","strMealThumb":"https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg","idMeal":"52785","strArea":"India","strCountry":"India"},{"strMeal":"Egg Drop Soup","strMealThumb":"https://www.themealdb.com/images/media/meals/1529446137.jpg","idMeal":"52955","strArea":"Chinese","strCountry":"China"},{"strMeal":"Eggplant Adobo","strMealThumb":"https://www.themealdb.com/images/media/meals/y7h0lq1683208991.jpg","idMeal":"53073","strArea":"Filipino","strCountry":"Philippines"},{"strMeal":"Ezme","strMealThumb":"https://www.themealdb.com/images/media/meals/pb6mj11763788331.jpg","idMeal":"53254","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Falafel","strMealThumb":"https://www.themealdb.com/images/media/meals/u5e9qq1763795441.jpg","idMeal":"53266","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Falafel Pita Sandwich with Tahini Sauce","strMealThumb":"https://www.themealdb.com/images/media/meals/ae6clc1760524712.jpg","idMeal":"53091","strArea":"Syrian","strCountry":"Syria"},{"strMeal":"Flamiche","strMealThumb":"https://www.themealdb.com/images/media/meals/wssvvs1511785879.jpg","idMeal":"52906","strArea":"France","strCountry":"France"},{"strMeal":"Ful Medames","strMealThumb":"https://www.themealdb.com/images/media/meals/lvn2d51598732465.jpg","idMeal":"53025","strArea":"Egyptian","strCountry":"Egypt"},{"strMeal":"Gigantes Plaki","strMealThumb":"https://www.themealdb.com/images/media/meals/b79r6f1585566277.jpg","idMeal":"53012","strArea":"Greek","strCountry":"Greece"},{"strMeal":"Griddled aubergines with sesame dressing","strMealThumb":"https://www.themealdb.com/images/media/meals/yoj48r1763817100.jpg","idMeal":"53274","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Grilled aubergines with spicy chickpeas & walnut sauce","strMealThumb":"https://www.themealdb.com/images/media/meals/ctw3ba1763788978.jpg","idMeal":"53255","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Grilled eggplant with coconut milk","strMealThumb":"https://www.themealdb.com/images/media/meals/bopa2i1683209167.jpg","idMeal":"53074","strArea":"Filipino","strCountry":"Philippines"},{"strMeal":"Hodge Podge","strMealThumb":"https://www.themealdb.com/images/media/meals/xihv0c1764447887.jpg","idMeal":"53340","strArea":"Canadian","strCountry":"Canada"},{"strMeal":"Jamaican Instant Pot Rice and Beans","strMealThumb":"https://www.themealdb.com/images/media/meals/11bvtm1764795135.jpg","idMeal":"53352","strArea":"Jamaican","strCountry":"Jamaica"},{"strMeal":"Jamaican Rice and Peas","strMealThumb":"https://www.themealdb.com/images/media/meals/pkyvrn1764878267.jpg","idMeal":"53357","strArea":"Jamaican","strCountry":"Jamaica"},{"strMeal":"Kadu Borani","strMealThumb":"https://www.themealdb.com/images/media/meals/walmi81779552709.jpg","idMeal":"53398","strArea":null,"strCountry":"Afghanistan"},{"strMeal":"Kafteji","strMealThumb":"https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg","idMeal":"52971","strArea":"Tunisian","strCountry":"Tunisia"},{"strMeal":"Kaspressknödel - Cheese Dumplings","strMealThumb":"https://www.themealdb.com/images/media/meals/x26z3y1780155760.jpg","idMeal":"53445","strArea":null,"strCountry":"Austria"},{"strMeal":"Kidney Bean Curry","strMealThumb":"https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg","idMeal":"52868","strArea":"India","strCountry":"India"},{"strMeal":"Koshari","strMealThumb":"https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg","idMeal":"53027","strArea":"Egyptian","strCountry":"Egypt"},{"strMeal":"Lakror me Kungull Summer Squash Pie","strMealThumb":"https://www.themealdb.com/images/media/meals/ae4rwb1779645576.jpg","idMeal":"53407","strArea":null,"strCountry":"Albania"},{"strMeal":"Leblebi Soup","strMealThumb":"https://www.themealdb.com/images/media/meals/x2fw9e1560460636.jpg","idMeal":"52973","strArea":"Tunisian","strCountry":"Tunisia"},{"strMeal":"Liegeoise Salad","strMealThumb":"https://www.themealdb.com/images/media/meals/ji3mho1782499823.jpg","idMeal":"53467","strArea":null,"strCountry":"Belgium"},{"strMeal":"Matar Paneer","strMealThumb":"https://www.themealdb.com/images/media/meals/xxpqsy1511452222.jpg","idMeal":"52865","strArea":"India","strCountry":"India"},{"strMeal":"Molasses Baked Beans","strMealThumb":"https://www.themealdb.com/images/media/meals/9tddhg1764443699.jpg","idMeal":"53336","strArea":"Canadian","strCountry":"Canada"},{"strMeal":"Moroccan Carrot Soup","strMealThumb":"https://www.themealdb.com/images/media/meals/jcr46d1614763831.jpg","idMeal":"53047","strArea":"Moroccan","strCountry":"Morocco"},{"strMeal":"Mushroom & Chestnut Rotolo","strMealThumb":"https://www.themealdb.com/images/media/meals/ssyqwr1511451678.jpg","idMeal":"52864","strArea":"British","strCountry":"United Kingdom"},{"strMeal":"Nordic smørrebrød with asparagus and horseradish cream","strMealThumb":"https://www.themealdb.com/images/media/meals/8a8fu01762772651.jpg","idMeal":"53117","strArea":"Norway","strCountry":"Norway"},{"strMeal":"Pa Amb Tomaquet (Bread with Tomato)","strMealThumb":"https://www.themealdb.com/images/media/meals/lz9rw91779733434.jpg","idMeal":"53417","strArea":null,"strCountry":"Andorra"},{"strMeal":"Patatas bravas","strMealThumb":"https://www.themealdb.com/images/media/meals/bvg8sn1763298713.jpg","idMeal":"53172","strArea":"Spanish","strCountry":"Spain"},{"strMeal":"Pisto con huevos","strMealThumb":"https://www.themealdb.com/images/media/meals/0nswfe1763279040.jpg","idMeal":"53160","strArea":"Spanish","strCountry":"Spain"},{"strMeal":"Pomegranate salad","strMealThumb":"https://www.themealdb.com/images/media/meals/fqpqml1764359125.jpg","idMeal":"53297","strArea":"Polish","strCountry":"Poland"},{"strMeal":"Potato Salad (Olivier Salad)","strMealThumb":"https://www.themealdb.com/images/media/meals/ebvuir1699013665.jpg","idMeal":"53081","strArea":"Russian","strCountry":"Russia"},{"strMeal":"Provençal Omelette Cake","strMealThumb":"https://www.themealdb.com/images/media/meals/qwtrtp1511799242.jpg","idMeal":"52921","strArea":"France","strCountry":"France"},{"strMeal":"Ratatouille","strMealThumb":"https://www.themealdb.com/images/media/meals/wrpwuu1511786491.jpg","idMeal":"52908","strArea":"France","strCountry":"France"},{"strMeal":"Ribollita","strMealThumb":"https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg","idMeal":"52811","strArea":"Italian","strCountry":"Italy"},{"strMeal":"Roast aubergine with goat's cheese & toasted flatbread","strMealThumb":"https://www.themealdb.com/images/media/meals/iydbwy1763816111.jpg","idMeal":"53273","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Roasted Eggplant With Tahini, Pine Nuts, and Lentils","strMealThumb":"https://www.themealdb.com/images/media/meals/ysqrus1487425681.jpg","idMeal":"52816","strArea":"United States","strCountry":"United States"},{"strMeal":"Sauerkraut pierogi","strMealThumb":"https://www.themealdb.com/images/media/meals/ckbx1h1764123606.jpg","idMeal":"53296","strArea":"Polish","strCountry":"Poland"},{"strMeal":"Sauerkraut pierogii","strMealThumb":"https://www.themealdb.com/images/media/meals/gqlxgc1764368767.jpg","idMeal":"53314","strArea":"Ukrainian","strCountry":"Ukraine"},{"strMeal":"Shakshuka","strMealThumb":"https://www.themealdb.com/images/media/meals/g373701551450225.jpg","idMeal":"52963","strArea":"Egyptian","strCountry":"Egypt"},{"strMeal":"Sichuan Eggplant","strMealThumb":"https://www.themealdb.com/images/media/meals/1oz4nb1765687990.jpg","idMeal":"53374","strArea":"Chinese","strCountry":"China"},{"strMeal":"Sichuan Style Stir-Fried Chinese Long Beans","strMealThumb":"https://www.themealdb.com/images/media/meals/i0610h1765659464.jpg","idMeal":"53371","strArea":"Chinese","strCountry":"China"},{"strMeal":"Silken Tofu with Sesame Soy Sauce","strMealThumb":"https://www.themealdb.com/images/media/meals/j9nray1765657692.jpg","idMeal":"53369","strArea":"Chinese","strCountry":"China"},{"strMeal":"Smoky Lentil Chili with Squash","strMealThumb":"https://www.themealdb.com/images/media/meals/uwxqwy1483389553.jpg","idMeal":"52784","strArea":"British","strCountry":"United Kingdom"},{"strMeal":"Spanish Tortilla","strMealThumb":"https://www.themealdb.com/images/media/meals/quuxsx1511476154.jpg","idMeal":"52872","strArea":"Spanish","strCountry":"Spain"},{"strMeal":"Spiced tortilla","strMealThumb":"https://www.themealdb.com/images/media/meals/7b862e1763194846.jpg","idMeal":"53142","strArea":"Spanish","strCountry":"Spain"},{"strMeal":"Spicy Arrabiata Penne","strMealThumb":"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg","idMeal":"52771","strArea":"Italian","strCountry":"Italy"},{"strMeal":"Spicy North African Potato Salad","strMealThumb":"https://www.themealdb.com/images/media/meals/urtwux1486983078.jpg","idMeal":"52797","strArea":"Moroccan","strCountry":"Morocco"},{"strMeal":"Spinach & Ricotta Cannelloni","strMealThumb":"https://www.themealdb.com/images/media/meals/wspuvp1511303478.jpg","idMeal":"52849","strArea":"Italian","strCountry":"Italy"},{"strMeal":"Squash linguine","strMealThumb":"https://www.themealdb.com/images/media/meals/wxswxy1511452625.jpg","idMeal":"52866","strArea":"Italian","strCountry":"Italy"},{"strMeal":"Stovetop Eggplant With Harissa, Chickpeas, and Cumin Yogurt","strMealThumb":"https://www.themealdb.com/images/media/meals/yqwtvu1487426027.jpg","idMeal":"52817","strArea":"United States","strCountry":"United States"},{"strMeal":"Stuffed Bell Peppers with Quinoa and Black Beans","strMealThumb":"https://www.themealdb.com/images/media/meals/b66myb1683207208.jpg","idMeal":"53067","strArea":"Mexican","strCountry":"Mexico"},{"strMeal":"Sukuma Wiki","strMealThumb":"https://www.themealdb.com/images/media/meals/60o82j1762341177.jpg","idMeal":"53113","strArea":"Kenyan","strCountry":"Kenya"},{"strMeal":"Summer Pistou","strMealThumb":"https://www.themealdb.com/images/media/meals/rqtxvr1511792990.jpg","idMeal":"52911","strArea":"France","strCountry":"France"},{"strMeal":"Sweet potato salad","strMealThumb":"https://www.themealdb.com/images/media/meals/z458v91763817681.jpg","idMeal":"53275","strArea":"Turkish","strCountry":"Turkey"},{"strMeal":"Tahini Lentils","strMealThumb":"https://www.themealdb.com/images/media/meals/vpxyqt1511464175.jpg","idMeal":"52869","strArea":"Moroccan","strCountry":"Morocco"},{"strMeal":"Tamiya","strMealThumb":"https://www.themealdb.com/images/media/meals/n3xxd91598732796.jpg","idMeal":"53026","strArea":"Egyptian","strCountry":"Egypt"},{"strMeal":"Tangy cabbage slaw","strMealThumb":"https://www.themealdb.com/images/media/meals/e2g2r21764367568.jpg","idMeal":"53312","strArea":"Ukrainian","strCountry":"Ukraine"},{"strMeal":"Tangy carrot, cabbage & onion salad","strMealThumb":"https://www.themealdb.com/images/media/meals/dbazbg1763779999.jpg","idMeal":"53246","strArea":"Vietnamese","strCountry":"Vietnam"},{"strMeal":"Tavë me Presh ska Mish Meatless Leek Bake","strMealThumb":"https://www.themealdb.com/images/media/meals/p5m3w21779644533.jpg","idMeal":"53405","strArea":null,"strCountry":"Albania"},{"strMeal":"Thai coconut & veg broth","strMealThumb":"https://www.themealdb.com/images/media/meals/4k8nzy1763583384.jpg","idMeal":"53208","strArea":"Thai","strCountry":"Thailand"},{"strMeal":"Thai pumpkin soup","strMealThumb":"https://www.themealdb.com/images/media/meals/1brbso1763585098.jpg","idMeal":"53210","strArea":"Thai","strCountry":"Thailand"},{"strMeal":"Thai rice noodle salad","strMealThumb":"https://www.themealdb.com/images/media/meals/6g3rso1763486069.jpg","idMeal":"53203","strArea":"Thai","strCountry":"Thailand"},{"strMeal":"Tofu, greens & cashew stir-fry","strMealThumb":"https://www.themealdb.com/images/media/meals/minfsc1763766806.jpg","idMeal":"53240","strArea":"Vietnamese","strCountry":"Vietnam"},{"strMeal":"Tortang Talong","strMealThumb":"https://www.themealdb.com/images/media/meals/va668f1683209318.jpg","idMeal":"53075","strArea":"Filipino","strCountry":"Philippines"},{"strMeal":"Vegetarian Casserole","strMealThumb":"https://www.themealdb.com/images/media/meals/vptwyt1511450962.jpg","idMeal":"52863","strArea":"British","strCountry":"United Kingdom"},{"strMeal":"Vegetarian Chilli","strMealThumb":"https://www.themealdb.com/images/media/meals/wqurxy1511453156.jpg","idMeal":"52867","strArea":"British","strCountry":"United Kingdom"},{"strMeal":"Vegetarian Shakshuka","strMealThumb":"https://www.themealdb.com/images/media/meals/eo0yfb1763600916.jpg","idMeal":"53222","strArea":"Saudi Arabian","strCountry":"Saudi Arabia"},{"strMeal":"Vietnamese veg parcels","strMealThumb":"https://www.themealdb.com/images/media/meals/f698g91763768731.jpg","idMeal":"53241","strArea":"Vietnamese","strCountry":"Vietnam"},{"strMeal":"Vietnamese-style veggie hotpot","strMealThumb":"https://www.themealdb.com/images/media/meals/4uje7l1763762276.jpg","idMeal":"53236","strArea":"Vietnamese","strCountry":"Vietnam"},{"strMeal":"Yaki Udon","strMealThumb":"https://www.themealdb.com/images/media/meals/wrustq1511475474.jpg","idMeal":"52871","strArea":"Japanese","strCountry":"Japan"}]
 
 class DietModel {
   DietModel({
-      List<Data>? data, 
-      Pagination? pagination,}){
-    _data = data;
-    _pagination = pagination;
+      List<Meals>? meals,}){
+    _meals = meals;
 }
 
   DietModel.fromJson(dynamic json) {
-    if (json['data'] != null) {
-      _data = [];
-      json['data'].forEach((v) {
-        _data?.add(Data.fromJson(v));
+    if (json['meals'] != null) {
+      _meals = [];
+      json['meals'].forEach((v) {
+        _meals?.add(Meals.fromJson(v));
       });
     }
-    _pagination = json['pagination'] != null ? Pagination.fromJson(json['pagination']) : null;
   }
-  List<Data>? _data;
-  Pagination? _pagination;
-DietModel copyWith({  List<Data>? data,
-  Pagination? pagination,
-}) => DietModel(  data: data ?? _data,
-  pagination: pagination ?? _pagination,
+  List<Meals>? _meals;
+DietModel copyWith({  List<Meals>? meals,
+}) => DietModel(  meals: meals ?? _meals,
 );
-  List<Data>? get data => _data;
-  Pagination? get pagination => _pagination;
+  List<Meals>? get meals => _meals;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    if (_data != null) {
-      map['data'] = _data?.map((v) => v.toJson()).toList();
-    }
-    if (_pagination != null) {
-      map['pagination'] = _pagination?.toJson();
+    if (_meals != null) {
+      map['meals'] = _meals?.map((v) => v.toJson()).toList();
     }
     return map;
   }
 
+
+  void operator [](int other)  {}
+
 }
 
-/// page : 1
-/// pageSize : 20
-/// total : 226
-/// totalPages : 12
+/// strMeal : "Air fryer patatas bravas"
+/// strMealThumb : "https://www.themealdb.com/images/media/meals/3m8yae1763257951.jpg"
+/// idMeal : "53158"
+/// strArea : "Spanish"
+/// strCountry : "Spain"
 
-class Pagination {
-  Pagination({
-      num? page, 
-      num? pageSize, 
-      num? total, 
-      num? totalPages,}){
-    _page = page;
-    _pageSize = pageSize;
-    _total = total;
-    _totalPages = totalPages;
+class Meals {
+  Meals({
+      String? strMeal, 
+      String? strMealThumb, 
+      String? idMeal, 
+      String? strArea, 
+      String? strCountry,}){
+    _strMeal = strMeal;
+    _strMealThumb = strMealThumb;
+    _idMeal = idMeal;
+    _strArea = strArea;
+    _strCountry = strCountry;
 }
 
-  Pagination.fromJson(dynamic json) {
-    _page = json['page'];
-    _pageSize = json['pageSize'];
-    _total = json['total'];
-    _totalPages = json['totalPages'];
+  Meals.fromJson(dynamic json) {
+    _strMeal = json['strMeal'];
+    _strMealThumb = json['strMealThumb'];
+    _idMeal = json['idMeal'];
+    _strArea = json['strArea'];
+    _strCountry = json['strCountry'];
   }
-  num? _page;
-  num? _pageSize;
-  num? _total;
-  num? _totalPages;
-Pagination copyWith({  num? page,
-  num? pageSize,
-  num? total,
-  num? totalPages,
-}) => Pagination(  page: page ?? _page,
-  pageSize: pageSize ?? _pageSize,
-  total: total ?? _total,
-  totalPages: totalPages ?? _totalPages,
+  String? _strMeal;
+  String? _strMealThumb;
+  String? _idMeal;
+  String? _strArea;
+  String? _strCountry;
+Meals copyWith({  String? strMeal,
+  String? strMealThumb,
+  String? idMeal,
+  String? strArea,
+  String? strCountry,
+}) => Meals(  strMeal: strMeal ?? _strMeal,
+  strMealThumb: strMealThumb ?? _strMealThumb,
+  idMeal: idMeal ?? _idMeal,
+  strArea: strArea ?? _strArea,
+  strCountry: strCountry ?? _strCountry,
 );
-  num? get page => _page;
-  num? get pageSize => _pageSize;
-  num? get total => _total;
-  num? get totalPages => _totalPages;
+  String? get strMeal => _strMeal;
+  String? get strMealThumb => _strMealThumb;
+  String? get idMeal => _idMeal;
+  String? get strArea => _strArea;
+  String? get strCountry => _strCountry;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['page'] = _page;
-    map['pageSize'] = _pageSize;
-    map['total'] = _total;
-    map['totalPages'] = _totalPages;
-    return map;
-  }
-
-}
-
-/// id : "2b93dd53-f387-4632-92e9-2f866e62c1fb"
-/// title : "5-Minute Global Chicken Marinade"
-/// slug : "5-minute-global-chicken-marinade"
-/// description : "A lean, protein-packed marinade blending sweet, spicy, and umami flavors - ready in minutes for grilled or baked chicken. [Adapted from Wikibooks Cookbook (CC BY-SA): https://en.wikibooks.org/wiki/Cookbook%3AChicken%20Barbecue%20Sauce]"
-/// prepTimeMin : 5
-/// cookTimeMin : 15
-/// servings : 2
-/// calories : 364.2
-/// mealType : "lunch"
-/// dietTags : ["high_protein","low_carb"]
-/// cuisineType : "international"
-/// difficulty : "easy"
-/// imageUrl : "https://ymove-recipes.b-cdn.net/5-minute-global-chicken-marinade.png?width=600&format=auto&quality=80"
-/// protein : 47.6
-/// fat : 13.3
-/// carbs : 12.4
-
-class Data {
-  Data({
-      String? id, 
-      String? title, 
-      String? slug, 
-      String? description, 
-      num? prepTimeMin, 
-      num? cookTimeMin, 
-      num? servings, 
-      num? calories, 
-      String? mealType, 
-      List<String>? dietTags, 
-      String? cuisineType, 
-      String? difficulty, 
-      String? imageUrl, 
-      num? protein, 
-      num? fat, 
-      num? carbs,}){
-    _id = id;
-    _title = title;
-    _slug = slug;
-    _description = description;
-    _prepTimeMin = prepTimeMin;
-    _cookTimeMin = cookTimeMin;
-    _servings = servings;
-    _calories = calories;
-    _mealType = mealType;
-    _dietTags = dietTags;
-    _cuisineType = cuisineType;
-    _difficulty = difficulty;
-    _imageUrl = imageUrl;
-    _protein = protein;
-    _fat = fat;
-    _carbs = carbs;
-}
-
-  Data.fromJson(dynamic json) {
-    _id = json['id'];
-    _title = json['title'];
-    _slug = json['slug'];
-    _description = json['description'];
-    _prepTimeMin = json['prepTimeMin'];
-    _cookTimeMin = json['cookTimeMin'];
-    _servings = json['servings'];
-    _calories = json['calories'];
-    _mealType = json['mealType'];
-    _dietTags = json['dietTags'] != null ? json['dietTags'].cast<String>() : [];
-    _cuisineType = json['cuisineType'];
-    _difficulty = json['difficulty'];
-    _imageUrl = json['imageUrl'];
-    _protein = json['protein'];
-    _fat = json['fat'];
-    _carbs = json['carbs'];
-  }
-  String? _id;
-  String? _title;
-  String? _slug;
-  String? _description;
-  num? _prepTimeMin;
-  num? _cookTimeMin;
-  num? _servings;
-  num? _calories;
-  String? _mealType;
-  List<String>? _dietTags;
-  String? _cuisineType;
-  String? _difficulty;
-  String? _imageUrl;
-  num? _protein;
-  num? _fat;
-  num? _carbs;
-Data copyWith({  String? id,
-  String? title,
-  String? slug,
-  String? description,
-  num? prepTimeMin,
-  num? cookTimeMin,
-  num? servings,
-  num? calories,
-  String? mealType,
-  List<String>? dietTags,
-  String? cuisineType,
-  String? difficulty,
-  String? imageUrl,
-  num? protein,
-  num? fat,
-  num? carbs,
-}) => Data(  id: id ?? _id,
-  title: title ?? _title,
-  slug: slug ?? _slug,
-  description: description ?? _description,
-  prepTimeMin: prepTimeMin ?? _prepTimeMin,
-  cookTimeMin: cookTimeMin ?? _cookTimeMin,
-  servings: servings ?? _servings,
-  calories: calories ?? _calories,
-  mealType: mealType ?? _mealType,
-  dietTags: dietTags ?? _dietTags,
-  cuisineType: cuisineType ?? _cuisineType,
-  difficulty: difficulty ?? _difficulty,
-  imageUrl: imageUrl ?? _imageUrl,
-  protein: protein ?? _protein,
-  fat: fat ?? _fat,
-  carbs: carbs ?? _carbs,
-);
-  String? get id => _id;
-  String? get title => _title;
-  String? get slug => _slug;
-  String? get description => _description;
-  num? get prepTimeMin => _prepTimeMin;
-  num? get cookTimeMin => _cookTimeMin;
-  num? get servings => _servings;
-  num? get calories => _calories;
-  String? get mealType => _mealType;
-  List<String>? get dietTags => _dietTags;
-  String? get cuisineType => _cuisineType;
-  String? get difficulty => _difficulty;
-  String? get imageUrl => _imageUrl;
-  num? get protein => _protein;
-  num? get fat => _fat;
-  num? get carbs => _carbs;
-
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['title'] = _title;
-    map['slug'] = _slug;
-    map['description'] = _description;
-    map['prepTimeMin'] = _prepTimeMin;
-    map['cookTimeMin'] = _cookTimeMin;
-    map['servings'] = _servings;
-    map['calories'] = _calories;
-    map['mealType'] = _mealType;
-    map['dietTags'] = _dietTags;
-    map['cuisineType'] = _cuisineType;
-    map['difficulty'] = _difficulty;
-    map['imageUrl'] = _imageUrl;
-    map['protein'] = _protein;
-    map['fat'] = _fat;
-    map['carbs'] = _carbs;
+    map['strMeal'] = _strMeal;
+    map['strMealThumb'] = _strMealThumb;
+    map['idMeal'] = _idMeal;
+    map['strArea'] = _strArea;
+    map['strCountry'] = _strCountry;
     return map;
   }
 

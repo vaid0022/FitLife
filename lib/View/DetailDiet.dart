@@ -13,45 +13,57 @@ class Detaildiet extends StatefulWidget {
 
 class _DetaildietState extends State<Detaildiet> {
   @override
-  var Diet = Dietlogic.AllDiet;
+
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 500,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image:DecorationImage(
-                  image: NetworkImage(Diet[widget.index].imageUrl.toString()),
-                fit: BoxFit.cover
-              )
-            ),
-          ),
-          Expanded(
-            child: Card(
-              surfaceTintColor: Colors.grey,
-                child:SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      textpadding.TextPadding(padding: 10, text: " ${Diet[widget.index].title}", isBold: true, isLines: false,fontSize: 23),
-                      textpadding.TextPadding(padding: 10, text: "Description: ${Diet[widget.index].description}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "Calories: ${Diet[widget.index].calories}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "Difficulty: ${Diet[widget.index].difficulty}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "Carbs: ${Diet[widget.index].carbs} ", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "CookTimeMin: ${Diet[widget.index].cookTimeMin} min.", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "CusineType: ${Diet[widget.index].cuisineType}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "MealType: ${Diet[widget.index].mealType}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "Protein: ${Diet[widget.index].protein}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "Serving: ${Diet[widget.index].servings}", isBold: false, isLines: false,fontSize: 17),
-                      textpadding.TextPadding(padding: 10, text: "DietTag: ${Diet[widget.index].dietTags}", isBold: false, isLines: false,fontSize: 17),
-                    ],
+      body: FutureBuilder(
+        future: Dietlogic.GetApi(),
+        builder: (context, snapshot) {
+          if(snapshot.connectionState == ConnectionState.waiting){
+            return Center(child: CircularProgressIndicator(),);
+          }
+          if(snapshot.hasData ==null || snapshot.data!.meals!.isEmpty){
+            return Center(child: Text("Data is Not Available"),);
+          }
+          final Diet = snapshot.data!.meals;
+
+          return Column(
+            children: [
+              Hero(
+                tag: Diet![widget.index].idMeal.toString(),
+                child: Container(
+                  height: 500,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image:DecorationImage(
+                        image: NetworkImage(Diet![widget.index].strMealThumb.toString()),
+                      fit: BoxFit.cover
+                    )
                   ),
                 ),
               ),
-          ),
+              SizedBox(height: 15,),
+              SizedBox(
+                height: 200,
+                width: double.infinity,
+                child: Card(
+                  elevation: 5,
+                  surfaceTintColor: Colors.grey,
+                    child:SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          textpadding.TextPadding(padding: 10, text: " ${Diet[widget.index].strMeal}", isBold: true, isLines: false,fontSize: 23),
+                          textpadding.TextPadding(padding: 10, text: "Description: ${Diet[widget.index].strCountry}", isBold: false, isLines: false,fontSize: 17),
+                          textpadding.TextPadding(padding: 10, text: "Calories: ${Diet[widget.index].strArea}", isBold: false, isLines: false,fontSize: 17),
+                        ],
+                      ),
+                    ),
+                  ),
+              ),
 
-        ],
+            ],
+          );
+        }
       ),
     );
 

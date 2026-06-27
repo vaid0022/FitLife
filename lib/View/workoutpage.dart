@@ -66,32 +66,40 @@ class _WorkoutpageState extends State<Workoutpage> {
                   },
 
                   child: Hero(
-                    tag: "hero",
+                    tag: Exerciselogic.AllExerciese[index].exerciseId.toString(),
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: Card(
+                        elevation: 8,
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: ListTile(
                             title: Column(
                                 children: [
                                  Text(
-                                        Exerciselogic.AllExerciese[index].name
-                                            .toString(),
+                                        Exerciselogic.AllExerciese[index].name.toString().toUpperCase()
+                                            .toString(),style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold),
                                       ),
                                   SizedBox(height: 20),
                                   FutureBuilder<String?>(
                                     future: Exerciselogic.gifToImage(GifUrl: Exerciselogic.AllExerciese[index].gifUrl!),
                                     builder: (context, Snapshot) {
                                       if(Snapshot.connectionState == ConnectionState.waiting){
-                                        return Center(child: CircularProgressIndicator(),);
+                                        return Center(child: Container(
+                                          height: 300,
+                                            width: double.infinity,
+                                            child: CircularProgressIndicator()),);
                                       }
                                       if(!Snapshot.hasData){
                                         return Center(
                                           child: Container(
+                                            height: 300,
+                                            width: double.infinity,
                                             child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                Icon(Icons.not_interested_outlined,color: Colors.red,size: 35,),
+                                                Icon(Icons.image_not_supported_outlined,size: 80,),
+                                                SizedBox(height: 10,),
                                                 Text("oops! Image is not availabel")
                                               ],
                                             ),
@@ -117,7 +125,7 @@ class _WorkoutpageState extends State<Workoutpage> {
                               ),
                             subtitle: Text(
                               Exerciselogic.AllExerciese[index].instructions
-                                  .toString(),maxLines: 3,overflow: TextOverflow.ellipsis,
+                                  .toString(),maxLines: 3,overflow: TextOverflow.ellipsis,style: TextStyle(fontSize: 20),
                             ),
                           ),
                         ),

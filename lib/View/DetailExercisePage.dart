@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:date_format/date_format.dart';
 import 'package:fitlife/Model/ExerciseModel.dart';
 import 'package:fitlife/Utility/Videowidget.dart';
 import 'package:fitlife/Utility/textpadding.dart';
@@ -18,13 +19,15 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
   @override
   var Exe = Exerciselogic.AllExerciese;
 
-
   Widget build(BuildContext context) {
+    if(Exe[widget.index].gifUrl == null && Exe[widget.index].gifUrl!.isEmpty){
+      return Center(child: Container(child: Column(children: [Icon(Icons.image_not_supported,size: 35,),Text("Not Image Available",style: TextStyle(fontSize: 20),)],),),);
+    }
     return Scaffold(
       body: Column(
         children: [
           Hero(
-            tag: "hero",
+            tag: Exe[widget.index].exerciseId.toString(),
             child: Container(
               height: 500,
               width: double.infinity,
@@ -41,7 +44,6 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
             child: Card(
               elevation: 5,
                 surfaceTintColor: Colors.grey,
-                shadowColor: Colors.lightBlueAccent,
                 child: Padding(
                   padding: const EdgeInsets.all(17.0),
                   child: SingleChildScrollView(

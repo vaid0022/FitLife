@@ -1,8 +1,10 @@
 import 'package:fitlife/Utility/custom.dart';
 import 'package:fitlife/ViewModel/StepsLogic.dart';
+import 'package:fitlife/ViewModel/provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class Steps extends StatefulWidget {
   @override
@@ -26,6 +28,7 @@ class _StateState extends State<Steps> {
   }
 
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context).Dark;
     return step.isLoading
         ? Center(
             child: Column(
@@ -44,7 +47,7 @@ class _StateState extends State<Steps> {
             ),
           )
         : SafeArea(
-          child: Scaffold(
+            child: Scaffold(
               body: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -64,9 +67,13 @@ class _StateState extends State<Steps> {
                                 child: CircularProgressIndicator(
                                   value: step.Progress.clamp(0.0, 1.0),
                                   strokeWidth: 8,
-                                  backgroundColor: Colors.white.withOpacity(0.4),
+                                  backgroundColor: theme
+                                      ? Colors.white.withOpacity(0.4)
+                                      : Colors.grey.shade400,
                                   valueColor: AlwaysStoppedAnimation<Color>(
-                                    Colors.lightBlue,
+                                    theme
+                                        ? Colors.lightBlue
+                                        : Colors.lightGreen,
                                   ),
                                 ),
                               ),
@@ -82,7 +89,7 @@ class _StateState extends State<Steps> {
                                         step.isWalking
                                             ? FontAwesomeIcons.personRunning
                                             : FontAwesomeIcons.person,
-                
+
                                         size: 60,
                                       ),
                                       SizedBox(height: 15),
@@ -107,7 +114,8 @@ class _StateState extends State<Steps> {
                                         showDialog(
                                           context: context,
                                           builder: (context) {
-                                            TextEditingController GoalController =
+                                            TextEditingController
+                                            GoalController =
                                                 TextEditingController();
                                             return AlertDialog.adaptive(
                                               title: Text("Goal"),
@@ -174,7 +182,10 @@ class _StateState extends State<Steps> {
                                   color: Color.fromARGB(255, 255, 87, 34),
                                 ),
                                 SizedBox(height: 15),
-                                Text("Calories", style: TextStyle(fontSize: 20)),
+                                Text(
+                                  "Calories",
+                                  style: TextStyle(fontSize: 20),
+                                ),
                                 SizedBox(height: 10),
                                 Text(
                                   step.calories.toString(),
@@ -195,10 +206,15 @@ class _StateState extends State<Steps> {
                                 FaIcon(
                                   FontAwesomeIcons.route,
                                   size: 35,
-                                  color: Colors.lightBlue,
+                                  color: theme
+                                      ? Colors.lightBlue
+                                      : Colors.lightGreen,
                                 ),
                                 SizedBox(height: 15),
-                                Text("Distance", style: TextStyle(fontSize: 20)),
+                                Text(
+                                  "Distance",
+                                  style: TextStyle(fontSize: 20),
+                                ),
                                 SizedBox(height: 10),
                                 Text(
                                   "${step.distance.toStringAsFixed(2)} Km",
@@ -216,64 +232,82 @@ class _StateState extends State<Steps> {
                       child: Card(
                         child: ListTile(
                           leading: CircleAvatar(
-                            backgroundColor: step.isWalking ? Colors.green : Colors.lightBlue.withOpacity(0.6),
+                            backgroundColor: theme
+                                ? step.isWalking
+                                      ? Colors.green
+                                      : Colors.lightBlue.withOpacity(0.6)
+                                : step.isWalking
+                                ? Colors.lightBlue
+                                : Colors.green.withOpacity(0.6),
                             child: FaIcon(
                               step.isWalking
                                   ? FontAwesomeIcons.personRunning
                                   : FontAwesomeIcons.person,
-                
+
                               size: 20,
                             ),
                           ),
                           title: Text(step.isWalking ? "Walking" : "Stop"),
-                          subtitle:  Text(
+                          subtitle: Text(
                             step.isWalking
                                 ? "Tracking your steps in real time."
                                 : "Start walking to track your steps.",
                           ),
-                
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 470,
-                          width:400 ,
-                          child: Card(
-                            child:  ListView.builder(
-                              physics: NeverScrollableScrollPhysics(),
-                                  itemCount: step.weeklyData.length,
-                                  itemBuilder:(context,index){
-                                    final data = step.weeklyData[index];
-                                    return Card(
-                                      elevation: data['isToday'] ? 8 : 2,
-                                      shadowColor: data['isToday']
-                                          ? Colors.blueAccent.withOpacity(0.4)
-                                          : Colors.transparent,
-                                      color: data['isToday']
-                                          ? Colors.green
-                                          : Theme.of(context).cardColor,
-                                      child: ListTile(
-                                        leading: CircleAvatar(
-                                          backgroundColor: data['isToday']
-                                              ? Theme.of(context).colorScheme.primary
-                                              : Colors.grey,
-                                          child: Text(
-                                            data['day'],
-                                            style: const TextStyle(color: Colors.white),
-                                          ),
-                                        ),
-                                        title: Text("Steps: ${data['steps']}"),
-                                      ),
-                                    );
-                                  }),
-                            ),
+                      width: 400,
+                      child: Card(
+                        child: ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: step.weeklyData.length,
+                          itemBuilder: (context, index) {
+                            final data = step.weeklyData[index];
+                            return Card(
+                              elevation: data['isToday'] ? 8 : 2,
+                              shadowColor: theme
+                                  ? data['isToday']
+                                  ? Colors.pink
+                                  : Colors.white
+                                  : data['isToday']
+                                  ? Colors.pink
+                                  : Colors.white,
+                              color: theme
+                                  ? data['isToday']
+                                  ? Colors.green
+                                  : Colors.white
+                                  : data['isToday']
+                                  ? Colors.lightGreen
+                                  : Colors.grey.withOpacity(0.2),
+                              child: ListTile(
+                                leading: CircleAvatar(
+                                  backgroundColor: theme
+                                      ? data['isToday']
+                                            ? Colors.pink
+                                            : Colors.blueAccent.withOpacity(0.5)
+                                      : data['isToday']
+                                      ? Colors.pink
+                                      : Colors.green.withOpacity(0.5),
+
+                                  child: Text(
+                                    data['day'],
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                                title: Text("Steps: ${data['steps']}"),
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    SizedBox(height: 20,)
-                
+                    ),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),
             ),
-        );
+          );
   }
 }
