@@ -29,24 +29,7 @@ class _StateState extends State<Steps> {
 
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeProvider>(context).Dark;
-    return step.isLoading
-        ? Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.not_interested_outlined,
-                  color: Colors.red,
-                  size: 80,
-                ),
-                Text(
-                  "oops! Somthing went wrong",
-                  style: TextStyle(fontSize: 30),
-                ),
-              ],
-            ),
-          )
-        : SafeArea(
+    return SafeArea(
             child: Scaffold(
               body: SingleChildScrollView(
                 child: Column(
@@ -139,13 +122,13 @@ class _StateState extends State<Steps> {
                                                       setState(() {});
                                                     });
                                                   },
-                                                  text: "OK",
+                                                  text: "OK",color: theme ? Colors.lightBlueAccent:Colors.lightGreen
                                                 ),
                                                 customWidget.elevatedButton(
                                                   callback: () {
                                                     Navigator.pop(context);
                                                   },
-                                                  text: "Cancel",
+                                                  text: "Cancel",color: Colors.red
                                                 ),
                                               ],
                                             );
@@ -173,6 +156,7 @@ class _StateState extends State<Steps> {
                           height: 150,
                           width: 200,
                           child: Card(
+                            elevation: 4,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -200,6 +184,7 @@ class _StateState extends State<Steps> {
                           height: 150,
                           width: 200,
                           child: Card(
+                            elevation: 4,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -230,6 +215,7 @@ class _StateState extends State<Steps> {
                       height: 80,
                       width: 420,
                       child: Card(
+                        elevation: 4,
                         child: ListTile(
                           leading: CircleAvatar(
                             backgroundColor: theme
@@ -266,7 +252,7 @@ class _StateState extends State<Steps> {
                           itemBuilder: (context, index) {
                             final data = step.weeklyData[index];
                             return Card(
-                              elevation: data['isToday'] ? 8 : 2,
+                              elevation: data['isToday'] ? 8 : 4,
                               shadowColor: theme
                                   ? data['isToday']
                                   ? Colors.pink
@@ -280,7 +266,7 @@ class _StateState extends State<Steps> {
                                   : Colors.white
                                   : data['isToday']
                                   ? Colors.lightGreen
-                                  : Colors.grey.withOpacity(0.2),
+                                  : Colors.white,
                               child: ListTile(
                                 leading: CircleAvatar(
                                   backgroundColor: theme

@@ -43,7 +43,6 @@ class _WorkoutpageState extends State<Workoutpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(),
 
       body: Exerciselogic.AllExerciese.isEmpty
           ? Center(child: CircularProgressIndicator())

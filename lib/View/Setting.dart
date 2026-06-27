@@ -56,7 +56,7 @@ class _SettingState extends State<Setting> {
                         height: 100,
                         width: 100,
                         child: CircleAvatar(
-                          backgroundColor: Colors.lightBlueAccent,
+                          backgroundColor:DarkMode ? Colors.blueAccent : Colors.lightGreen,
                           child: textpadding.TextPadding(
                             padding: 2,
                             text: provider.currentUser!.name
@@ -66,6 +66,7 @@ class _SettingState extends State<Setting> {
                             isBold: true,
                             isLines: false,
                             fontSize: 40,
+                            color: Colors.white
                           ),
                         ),
                       ),
@@ -95,13 +96,14 @@ class _SettingState extends State<Setting> {
               child: SwitchListTile.adaptive(
                 title: Text("Theme Mode"),
                 subtitle: Text("Theme mode only have dark and light mode"),
-                value: Provider.of<ThemeProvider>(context,listen: false).Dark,
+                value: Provider.of<ThemeProvider>(context, listen: false).Dark,
                 onChanged: (value) {
-                  Provider.of<ThemeProvider>(context,listen: false).SetTheme(Istheme: value);
+                  Provider.of<ThemeProvider>(
+                    context,
+                    listen: false,
+                  ).SetTheme(Istheme: value);
                   Sharedprefrence.SetTheme(value: value);
-                  setState(() {
-                  });
-
+                  setState(() {});
                 },
               ),
             ),
@@ -149,10 +151,13 @@ class _SettingState extends State<Setting> {
               ),
             ),
             InkWell(
-              onTap: (){
-                showModalBottomSheet(context: context, builder: (context){
-                  return Forgotpassword();
-                });
+              onTap: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return Forgotpassword();
+                  },
+                );
               },
               child: Card(
                 child: ListTile(
@@ -175,15 +180,25 @@ class _SettingState extends State<Setting> {
                 padding: const EdgeInsets.all(8.0),
                 child: customWidget.elevatedButton(
                   callback: () async {
-                    await FirebaseAuth.instance.signOut().then((value) {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => loginpage()),
-                      );
-                    });
+                    await settingLogic.Conformation(
+                      context: context,isDelete: true
+                    );
+                  },
+                  text: "Delete",
+                  color: Colors.red,
+                ),
+              ),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: customWidget.elevatedButton(
+                  callback: () async {
+                    settingLogic.Conformation(context: context, isDelete: false);
                   },
                   text: "Log Out",
-                  color:DarkMode ? Colors.lightBlue : Colors.green.shade400,
+                  color: DarkMode ? Colors.lightBlue : Colors.green.shade400,
                 ),
               ),
             ),
@@ -195,7 +210,7 @@ class _SettingState extends State<Setting> {
 }
 
 class UserInfo extends StatelessWidget {
-   UserInfo({super.key});
+  UserInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -203,7 +218,7 @@ class UserInfo extends StatelessWidget {
     return Container(
       height: 300,
       width: double.infinity,
-      color: Colors.grey,
+      color: Colors.white.withOpacity(0.1),
       child: Consumer<CurrentUserProvider>(
         builder: (_, provider, __) {
           return Center(
@@ -223,7 +238,7 @@ class UserInfo extends StatelessWidget {
                         text2: provider.currentUser!.name.toString(),
                         text1Size: 22,
                         text2Size: 20,
-                        color1:DarkMode ? Colors.white : Colors.black,
+                        color1: DarkMode ? Colors.white : Colors.black,
                         color2: DarkMode ? Colors.white : Colors.black,
                       ),
                       SizedBox(height: 15),
@@ -274,11 +289,11 @@ class UserInfo extends StatelessWidget {
 class ConformPass extends StatelessWidget {
   ConformPass({super.key});
   @override
-
   Widget build(BuildContext context) {
-
     return Container(
-      height:  MediaQuery.of(context).size.height * 0.3 + MediaQuery.of(context).viewInsets.bottom,
+      height:
+          MediaQuery.of(context).size.height * 0.3 +
+          MediaQuery.of(context).viewInsets.bottom,
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -291,19 +306,25 @@ class ConformPass extends StatelessWidget {
               isLines: false,
               color: Colors.green,
               fontSize: 35,
-            ),SizedBox(height: 30,),
+            ),
+            SizedBox(height: 30),
             customWidget.textField(
               controller: settingLogic.ConformController,
               istrue: false,
               label: "Enter Password",
               icon: Icons.password_outlined,
-            ),SizedBox(height: 20,),
-            customWidget.elevatedButton(
-              callback: () {
-              settingLogic.passConform(context: context);
-              },
-              text: "CONFORM",
-              color: Colors.lightBlue,
+            ),
+            SizedBox(height: 20),
+            SizedBox(
+              width: 500,
+              child: customWidget.elevatedButton(
+                callback: () {
+                  settingLogic.passConform(context: context);
+                  settingLogic.ConformController.clear();
+                },
+                text: "CONFORM",
+                color: Provider.of<ThemeProvider>(context).Dark ? Colors.lightBlue :Colors.lightGreen,
+              ),
             ),
           ],
         ),

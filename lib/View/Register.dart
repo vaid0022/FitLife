@@ -55,9 +55,9 @@ class _RegisterState extends State<Register> {
                                     istrue: false,
                                     label: "Username",
                                     icon: Icons.supervised_user_circle_outlined,
-                                    lcolor: Colors.black,
-                                    scolor: Colors.black,
-                                    fillColor: Colors.grey.shade200
+                                    lcolor: Colors.white,
+                                    scolor: Colors.white,
+                                    fillColor: Colors.black
                                   ),
                                 ),
                               ),
@@ -71,9 +71,9 @@ class _RegisterState extends State<Register> {
                                     istrue: false,
                                     label: "Email",
                                     icon: Icons.email,
-                                    lcolor: Colors.black,
-                                    scolor: Colors.black,
-                                    fillColor: Colors.grey.shade200
+                                    lcolor: Colors.white,
+                                    scolor: Colors.white,
+                                    fillColor: Colors.black
                                   ),
                                 ),
                               ),
@@ -88,9 +88,9 @@ class _RegisterState extends State<Register> {
                                     istrue: true,
                                     label: "Password",
                                     icon: Icons.password_outlined,
-                                    lcolor: Colors.black,
-                                    scolor: Colors.black,
-                                    fillColor: Colors.grey.shade200
+                                    lcolor: Colors.white,
+                                    scolor: Colors.white,
+                                    fillColor: Colors.black
                                   ),
                                 ),
                               ),

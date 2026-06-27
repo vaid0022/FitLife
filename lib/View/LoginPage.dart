@@ -1,7 +1,9 @@
 import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/FirebaseLogin.dart';
 import 'package:fitlife/Utility/custom.dart';
 import 'package:fitlife/View/Register.dart';
+import 'package:fitlife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class loginpage extends StatelessWidget {
   @override
@@ -48,7 +50,7 @@ class loginpage extends StatelessWidget {
                     lcolor: Colors.black,
                     scolor: Colors.black,
                     fontColor: Colors.black,
-
+                    fillColor: Colors.white
                   ),
                   SizedBox(height: 20),
                   customWidget.textField(
@@ -59,7 +61,7 @@ class loginpage extends StatelessWidget {
                     lcolor: Colors.black,
                     scolor: Colors.black,
                     fontColor: Colors.black,
-
+                    fillColor: Colors.white
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -203,6 +205,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
               scolor: Colors.black,
               icon: Icons.email,
               fontColor: Colors.black,
+              fillColor: Colors.white
             ),
             SizedBox(height: 50),
             SizedBox(

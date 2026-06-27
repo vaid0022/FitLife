@@ -1,8 +1,11 @@
 import "package:fitlife/Utility/custom.dart";
+import "package:fitlife/ViewModel/provider.dart";
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 
 class alert {
   static Future<void> AlertBox({required BuildContext context,required String title,required String Decre,required String btnText}) {
+     final theme = Provider.of<ThemeProvider>(context,listen: false).Dark;
     return showDialog(
       context: context,
       builder: (context) {
@@ -14,7 +17,7 @@ class alert {
               callback: () {
                 return Navigator.pop(context);
               },
-              text: btnText,color: Colors.blue,
+              text: btnText,color:theme ?  Colors.blue :Colors.lightGreen,
             ),
           ],
         );

@@ -67,11 +67,9 @@ class _homeState extends State<home> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          color: Colors.black12,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 20),
 
                 // UserInfo
                 user(),
@@ -103,42 +101,45 @@ class _userState extends State<user> {
 
   Widget build(BuildContext context) {
     final DarkMode = Provider.of<ThemeProvider>(context).Dark;
-    return Container(
+    return SizedBox(
       height: 150,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(height: 20),
-            Row(
-              children: [
-                Text(
-                  "Welcome to Fit Life!  ",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: DarkMode ? Colors.green.shade400 : Colors.red),
-                ),
-                Consumer<CurrentUserProvider>(
-                  builder: (_, provider, __) {
-                    if (provider.currentUser == null ||
-                        provider.currentUser.toString().isEmpty) {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                    return Text(
-                      provider.currentUser!.name,
-                      style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-            Align(
-              alignment: Alignment.topLeft,
-              child: Text("Your fitness journey starts here.",style: TextStyle(fontSize: 18,color: DarkMode ? Colors.orange : Colors.green),),
-            ),
-          ],
+      child: Card(
+        elevation: 5,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Text(
+                    "Welcome to Fit Life!  ",
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: DarkMode ? Colors.green.shade400 : Colors.red),
+                  ),
+                  Consumer<CurrentUserProvider>(
+                    builder: (_, provider, __) {
+                      if (provider.currentUser == null ||
+                          provider.currentUser.toString().isEmpty) {
+                        return Center(child: CircularProgressIndicator());
+                      }
+                      return Text(
+                        provider.currentUser!.name,
+                        style: TextStyle(
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text("Your fitness journey starts here.",style: TextStyle(fontSize: 18,color: DarkMode ? Colors.orange : Colors.green),),
+              ),
+            ],
+          ),
         ),
       ),
     );

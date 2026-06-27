@@ -80,7 +80,7 @@ Future<void> onBgServiceStart(ServiceInstance service) async {
       //saved today steps
       final todaySteps = (event.steps - savedInitial).clamp(0, 9999999);
 
-      await prefs.setInt("Sterps_$today", todaySteps);
+      await prefs.setInt("Steps_$today", todaySteps);
 
       debugPrint("[BG]Steps Saved => $todaySteps");
 
