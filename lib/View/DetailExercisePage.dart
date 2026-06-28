@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:date_format/date_format.dart';
 import 'package:fitlife/Model/ExerciseModel.dart';
 import 'package:fitlife/Utility/Videowidget.dart';
+import 'package:fitlife/Utility/shimmer.dart';
 import 'package:fitlife/Utility/textpadding.dart';
 import 'package:fitlife/ViewModel/Exerciselogic.dart';
 import 'package:flutter/material.dart';
@@ -20,8 +21,11 @@ class _DetailexercisepageState extends State<Detailexercisepage> {
   var Exe = Exerciselogic.AllExerciese;
 
   Widget build(BuildContext context) {
+    if(Exe == null || Exe.isEmpty){
+      return detailboxes();
+    }
     if(Exe[widget.index].gifUrl == null && Exe[widget.index].gifUrl!.isEmpty){
-      return Center(child: Container(child: Column(children: [Icon(Icons.image_not_supported,size: 35,),Text("Not Image Available",style: TextStyle(fontSize: 20),)],),),);
+      return box(isWorkout: false);
     }
     return Scaffold(
       body: Column(

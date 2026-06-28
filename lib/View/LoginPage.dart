@@ -28,12 +28,14 @@ class loginpage extends StatelessWidget {
           child: Align(
             alignment: Alignment.topLeft,
             child: Container(
-              height: 600,
-              width: 350,
+              height: 1000,
+              width: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 30),
+
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -53,15 +55,18 @@ class loginpage extends StatelessWidget {
                     fillColor: Colors.white
                   ),
                   SizedBox(height: 20),
-                  customWidget.textField(
-                    controller: passcontroller,
-                    istrue: true,
-                    label: "Password",
-                    icon: Icons.password_outlined,
-                    lcolor: Colors.black,
-                    scolor: Colors.black,
-                    fontColor: Colors.black,
-                    fillColor: Colors.white
+                  SizedBox(
+                    width: 380,
+                    child: customWidget.textField(
+                      controller: passcontroller,
+                      istrue: true,
+                      label: "Password",
+                      icon: Icons.password_outlined,
+                      lcolor: Colors.black,
+                      scolor: Colors.black,
+                      fontColor: Colors.black,
+                      fillColor: Colors.white
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -84,10 +89,11 @@ class loginpage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(width: 80,)
                     ],
                   ),
                   SizedBox(
-                    width: 400,
+                    width: 280,
                     height: 40,
                     child: customWidget.elevatedButton(
                       callback: () {
@@ -102,8 +108,9 @@ class loginpage extends StatelessWidget {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      SizedBox(width: 50,),
                       Text(
                         "Don't  have account?",
                         style: TextStyle(color: Colors.white, fontSize: 15),
@@ -126,37 +133,7 @@ class loginpage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
-                  Center(
-                    child: Text(
-                      "or",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  ),
-                  SizedBox(width: 270,child: Divider()),
-                  SizedBox(height: 10),
-                  SizedBox(
-                    width: 240,
-                      child: ElevatedButton(
-                        onPressed: () {
-
-                          loginlogic.FirebaseSigupWithGoogle(context: context);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset("assets/login_res/google.png", width: 30),
-                            SizedBox(width: 10),
-                            Text("Google", style: TextStyle(fontSize: 30,color: Colors.grey)),
-                          ],
-                        ),
-                      ),
-                    ),
-
-                  SizedBox(height: 80),
+                  SizedBox(height: 500),
                 ],
               ),
             ),

@@ -64,7 +64,7 @@ Future<void> onBgServiceStart(ServiceInstance service) async {
     //Every time data arive this function runs
     (StepCount event) async {
       final prefs = await SharedPreferences.getInstance();
-      final today = DateFormat('yyyy-mm-dd').format(DateTime.now());
+      final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
 
       await prefs.setInt('bg_total_$today', event.steps);
 
@@ -80,7 +80,7 @@ Future<void> onBgServiceStart(ServiceInstance service) async {
       //saved today steps
       final todaySteps = (event.steps - savedInitial).clamp(0, 9999999);
 
-      await prefs.setInt("Steps_$today", todaySteps);
+      await prefs.setInt("steps_$today", todaySteps);
 
       debugPrint("[BG]Steps Saved => $todaySteps");
 

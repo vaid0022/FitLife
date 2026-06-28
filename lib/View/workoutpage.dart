@@ -1,9 +1,11 @@
 import 'dart:io';
 
 import 'package:fitlife/Model/ExerciseModel.dart';
+import 'package:fitlife/Utility/shimmer.dart';
 import 'package:fitlife/View/DetailExercisePage.dart';
 import 'package:fitlife/ViewModel/Exerciselogic.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class Workoutpage extends StatefulWidget {
   const Workoutpage({super.key});
@@ -18,11 +20,9 @@ class _WorkoutpageState extends State<Workoutpage> {
   void initState() {
     super.initState();
 
-    Exerciselogic.Reset().then((_){
-      if(mounted){
-        setState(() {
-
-        });
+    Exerciselogic.Reset().then((_) {
+      if (mounted) {
+        setState(() {});
       }
     });
 
@@ -31,9 +31,7 @@ class _WorkoutpageState extends State<Workoutpage> {
         setState(() {});
       }
     });
-
   }
-
 
   void dispose() {
     Exerciselogic.scrollController.dispose();
@@ -43,14 +41,14 @@ class _WorkoutpageState extends State<Workoutpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Exerciselogic.AllExerciese.isEmpty
-          ? Center(child: CircularProgressIndicator())
+          ? listboxes()
           : ListView.builder(
               controller: Exerciselogic.scrollController,
-              itemCount: Exerciselogic.AllExerciese.length + (Exerciselogic.hasMoreData ? 1 : 0),
+              itemCount:
+                  Exerciselogic.AllExerciese.length +
+                  (Exerciselogic.hasMoreData ? 1 : 0),
               itemBuilder: (context, index) {
-
                 if (index == Exerciselogic.AllExerciese.length) {
                   return Center(child: CircularProgressIndicator());
                 }
@@ -65,7 +63,8 @@ class _WorkoutpageState extends State<Workoutpage> {
                   },
 
                   child: Hero(
-                    tag: Exerciselogic.AllExerciese[index].exerciseId.toString(),
+                    tag: Exerciselogic.AllExerciese[index].exerciseId
+                        .toString(),
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: Card(
@@ -74,57 +73,86 @@ class _WorkoutpageState extends State<Workoutpage> {
                           padding: const EdgeInsets.all(12.0),
                           child: ListTile(
                             title: Column(
-                                children: [
-                                 Text(
-                                        Exerciselogic.AllExerciese[index].name.toString().toUpperCase()
-                                            .toString(),style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold),
-                                      ),
-                                  SizedBox(height: 20),
-                                  FutureBuilder<String?>(
-                                    future: Exerciselogic.gifToImage(GifUrl: Exerciselogic.AllExerciese[index].gifUrl!),
-                                    builder: (context, Snapshot) {
-                                      if(Snapshot.connectionState == ConnectionState.waiting){
-                                        return Center(child: Container(
+                              children: [
+                                Text(
+                                  Exerciselogic.AllExerciese[index].name
+                                      .toString()
+                                      .toUpperCase()
+                                      .toString(),
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: 20),
+                                FutureBuilder<String?>(
+                                  future: Exerciselogic.gifToImage(
+                                    GifUrl: Exerciselogic
+                                        .AllExerciese[index]
+                                        .gifUrl!,
+                                  ),
+                                  builder: (context, Snapshot) {
+                                    if (Snapshot.connectionState ==
+                                        ConnectionState.waiting) {
+                                      return Center(
+                                        child: Container(
                                           height: 300,
-                                            width: double.infinity,
-                                            child: CircularProgressIndicator()),);
-                                      }
-                                      if(!Snapshot.hasData){
-                                        return Center(
-                                          child: Container(
-                                            height: 300,
-                                            width: double.infinity,
-                                            child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Icon(Icons.image_not_supported_outlined,size: 80,),
-                                                SizedBox(height: 10,),
-                                                Text("oops! Image is not availabel")
-                                              ],
-                                            ),
-                                          ),
-                                        );
-                                      }
-                                      return Container(
-                                        height: 300,
-                                        width: double.infinity,
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Colors.black,width: 1),
-                                          borderRadius: BorderRadius.circular(21),
-                                          image: DecorationImage(
-                                            image:FileImage(File(Snapshot.data!)),
-                                            fit: BoxFit.cover,
+                                          width: double.infinity,
+                                          child: box(isWorkout: true,),
+                                        ),
+                                      );
+                                    }
+                                    if (!Snapshot.hasData) {
+                                      return Center(
+                                        child: Container(
+                                          height: 300,
+                                          width: double.infinity,
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons
+                                                    .image_not_supported_outlined,
+                                                size: 80,
+                                              ),
+                                              SizedBox(height: 10),
+                                              Text(
+                                                "oops! Image is not availabel",
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       );
                                     }
-                                  ),
-                                  SizedBox(height: 20,)
-                                ],
-                              ),
+                                    return Container(
+                                      height: 300,
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width: 1,
+                                        ),
+                                        borderRadius: BorderRadius.circular(21),
+                                        image: DecorationImage(
+                                          image: FileImage(
+                                            File(Snapshot.data!),
+                                          ),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                SizedBox(height: 20),
+                              ],
+                            ),
                             subtitle: Text(
                               Exerciselogic.AllExerciese[index].instructions
-                                  .toString(),maxLines: 3,overflow: TextOverflow.ellipsis,style: TextStyle(fontSize: 20),
+                                  .toString(),
+                              maxLines: 3,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(fontSize: 20),
                             ),
                           ),
                         ),
@@ -138,3 +166,5 @@ class _WorkoutpageState extends State<Workoutpage> {
     );
   }
 }
+
+

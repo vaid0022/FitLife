@@ -252,7 +252,7 @@ class _StateState extends State<Steps> {
                           itemBuilder: (context, index) {
                             final data = step.weeklyData[index];
                             return Card(
-                              elevation: data['isToday'] ? 8 : 4,
+                              elevation: data['isToday'] ? 8 : 2,
                               shadowColor: theme
                                   ? data['isToday']
                                   ? Colors.pink
@@ -263,7 +263,7 @@ class _StateState extends State<Steps> {
                               color: theme
                                   ? data['isToday']
                                   ? Colors.green
-                                  : Colors.white
+                                  : Colors.grey.shade600
                                   : data['isToday']
                                   ? Colors.lightGreen
                                   : Colors.white,

@@ -1,3 +1,4 @@
+import 'package:fitlife/Utility/shimmer.dart';
 import 'package:fitlife/Utility/textpadding.dart';
 import 'package:fitlife/ViewModel/DietLogic.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _DetaildietState extends State<Detaildiet> {
         future: Dietlogic.GetApi(),
         builder: (context, snapshot) {
           if(snapshot.connectionState == ConnectionState.waiting){
-            return Center(child: CircularProgressIndicator(),);
+            return detailboxes();
           }
           if(snapshot.hasData ==null || snapshot.data!.meals!.isEmpty){
             return Center(child: Text("Data is Not Available"),);

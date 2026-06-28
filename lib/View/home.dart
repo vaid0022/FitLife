@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitlife/Reposetory/Firebase/FireStore/Fetchdata.dart';
 import 'package:fitlife/Utility/aboutFitLifewidget.dart';
 import 'package:fitlife/Utility/custom.dart';
+import 'package:fitlife/Utility/shimmer.dart';
 import 'package:fitlife/Utility/textpadding.dart';
 import 'package:fitlife/View/Setting.dart';
 import 'package:fitlife/ViewModel/HomepageModel.dart';
@@ -98,9 +99,13 @@ class user extends StatefulWidget {
 class _userState extends State<user> {
   @override
   final Fetchdata userinfo = Fetchdata();
-
   Widget build(BuildContext context) {
+    final User=  Provider.of<CurrentUserProvider>(context).currentUser;
     final DarkMode = Provider.of<ThemeProvider>(context).Dark;
+
+    if(User == null || User.toString().isEmpty){
+      return UserBox();
+    }
     return SizedBox(
       height: 150,
       child: Card(
@@ -119,10 +124,6 @@ class _userState extends State<user> {
                   ),
                   Consumer<CurrentUserProvider>(
                     builder: (_, provider, __) {
-                      if (provider.currentUser == null ||
-                          provider.currentUser.toString().isEmpty) {
-                        return Center(child: CircularProgressIndicator());
-                      }
                       return Text(
                         provider.currentUser!.name,
                         style: TextStyle(

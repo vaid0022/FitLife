@@ -2,7 +2,9 @@ import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitlife/Utility/alertbox.dart';
 import 'package:fitlife/View/home.dart';
+import 'package:fitlife/ViewModel/navifationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -21,7 +23,7 @@ class registerLogic {
 
           userCredential = await FirebaseAuth.instance
               .createUserWithEmailAndPassword(email: email, password: pass);
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>home()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>bottomnavigationabar()));
 
           final user = userCredential.user;
 
@@ -37,15 +39,12 @@ class registerLogic {
           });
 
         } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Please Enter email in right format")),
-          );
+          alert.AlertBox(context: context, title: "Error", Decre: "Please enter right information", btnText: "OK");
         }
 
     } catch (error) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(error.toString())));
+      alert.AlertBox(context: context, title: "Error", Decre: "Error: ${error.toString()}", btnText: "OK");
+
     }
   }
 
