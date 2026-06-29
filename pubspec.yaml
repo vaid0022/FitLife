@@ -55,6 +55,12 @@ dependencies:
   image: ^4.9.1
   path_provider: ^2.1.6
   shimmer: ^3.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+    android: true
+    ios: true
+    image_path: "assets/logo/FitLife.png"
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +81,7 @@ flutter:
   assets:
     - assets/login_res/
     - assets/HomePage_res/
+    - assets/logo/
 
 
   # The following line ensures that the Material Icons font is
