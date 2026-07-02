@@ -172,7 +172,7 @@ class _StateState extends State<Steps> {
                                 ),
                                 SizedBox(height: 10),
                                 Text(
-                                  step.calories.toString(),
+                            "${step.calories.toStringAsFixed(2)} Kcl",
                                   style: TextStyle(fontSize: 20),
                                 ),
                               ],

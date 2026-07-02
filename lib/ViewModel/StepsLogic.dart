@@ -25,7 +25,7 @@ Future<void> onBgServiceStart(ServiceInstance service) async {
 
     //For notification can use app icon in notification
     const InitializationSettings InitSetting = InitializationSettings(
-      android: AndroidInitializationSettings('@mipmap/ic_launcher'),
+      android: AndroidInitializationSettings('@drawable/ic_notification'),
     );
 
     // initialize notification with App icon
@@ -114,7 +114,7 @@ Future<void> initBackgroundService() async {
       FlutterLocalNotificationsPlugin();
 
   const InitializationSettings InitSetting = InitializationSettings(
-    android: AndroidInitializationSettings("@mipmap/ic_launcher"),
+    android: AndroidInitializationSettings("@drawable/ic_notification"),
   );
 
   //start notification
@@ -126,6 +126,7 @@ Future<void> initBackgroundService() async {
     description: "Cont your steps in background",
     importance: Importance.low,
   );
+
 
   await notification
       .resolvePlatformSpecificImplementation<
