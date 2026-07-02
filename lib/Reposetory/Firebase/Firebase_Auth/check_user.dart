@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/View/LoginPage.dart';
-import 'package:fitlife/View/home.dart';
-import 'package:fitlife/ViewModel/navifationbar.dart';
+import 'package:FitLife/View/LoginPage.dart';
+import 'package:FitLife/View/home.dart';
+import 'package:FitLife/ViewModel/navifationbar.dart';
 
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:fitlife/Model/DietModel.dart';
+import 'package:FitLife/Model/DietModel.dart';
 import 'package:http/http.dart' as http;
 
 class Dietlogic {

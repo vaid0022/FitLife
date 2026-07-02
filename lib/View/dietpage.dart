@@ -1,8 +1,8 @@
-import 'package:fitlife/Utility/CustomChoiceChip.dart';
-import 'package:fitlife/Utility/shimmer.dart';
-import 'package:fitlife/View/DetailDiet.dart';
-import 'package:fitlife/ViewModel/DietLogic.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/Utility/CustomChoiceChip.dart';
+import 'package:FitLife/Utility/shimmer.dart';
+import 'package:FitLife/View/DetailDiet.dart';
+import 'package:FitLife/ViewModel/DietLogic.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -173,7 +173,7 @@ class _DietpageState extends State<Dietpage> {
                           itemBuilder: (context, index) {
                             if (Diet!.meals![index].strMealThumb == null ||
                                 Diet.meals![index].strMealThumb!.isEmpty) {
-                              return box(isWorkout: false);
+                              return box(height: 500,);
                             }
                             return InkWell(
                               onTap: () {

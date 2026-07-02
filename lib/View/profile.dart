@@ -1,24 +1,24 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/Reposetory/Firebase/FireStore/Fetchdata.dart';
-import 'package:fitlife/Utility/alertbox.dart';
-import 'package:fitlife/Utility/custom.dart';
-import 'package:fitlife/Utility/richtext.dart';
-import 'package:fitlife/Utility/textpadding.dart';
-import 'package:fitlife/View/LoginPage.dart';
-import 'package:fitlife/ViewModel/SharedPrefrence.dart';
-import 'package:fitlife/ViewModel/provider.dart';
-import 'package:fitlife/ViewModel/setting.dart';
+import 'package:FitLife/Reposetory/Firebase/FireStore/Fetchdata.dart';
+import 'package:FitLife/Utility/alertbox.dart';
+import 'package:FitLife/Utility/custom.dart';
+import 'package:FitLife/Utility/richtext.dart';
+import 'package:FitLife/Utility/textpadding.dart';
+import 'package:FitLife/View/LoginPage.dart';
+import 'package:FitLife/ViewModel/SharedPrefrence.dart';
+import 'package:FitLife/ViewModel/provider.dart';
+import 'package:FitLife/ViewModel/profileLogic.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class Setting extends StatefulWidget {
-  const Setting({super.key});
+class Profile extends StatefulWidget {
+  const Profile({super.key});
 
   @override
-  State<Setting> createState() => _SettingState();
+  State<Profile> createState() => _ProfileState();
 }
 
-class _SettingState extends State<Setting> {
+class _ProfileState extends State<Profile> {
   @override
   void initState() {
     super.initState();
@@ -37,7 +37,7 @@ class _SettingState extends State<Setting> {
     final DarkMode = Provider.of<ThemeProvider>(context).Dark;
 
     return Scaffold(
-      appBar: AppBar(title: Text("Setting")),
+      appBar: AppBar(title: Text("Profile")),
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -180,7 +180,7 @@ class _SettingState extends State<Setting> {
                 padding: const EdgeInsets.all(8.0),
                 child: customWidget.elevatedButton(
                   callback: () async {
-                    await settingLogic.Conformation(
+                    await Profilelogic.Conformation(
                       context: context,isDelete: true
                     );
                   },
@@ -195,7 +195,7 @@ class _SettingState extends State<Setting> {
                 padding: const EdgeInsets.all(8.0),
                 child: customWidget.elevatedButton(
                   callback: () async {
-                    settingLogic.Conformation(context: context, isDelete: false);
+                    Profilelogic.Conformation(context: context, isDelete: false);
                   },
                   text: "Log Out",
                   color: DarkMode ? Colors.lightBlue : Colors.green.shade400,
@@ -309,7 +309,7 @@ class ConformPass extends StatelessWidget {
             ),
             SizedBox(height: 30),
             customWidget.textField(
-              controller: settingLogic.ConformController,
+              controller: Profilelogic.ConformController,
               istrue: false,
               label: "Enter Password",
               icon: Icons.password_outlined,
@@ -319,8 +319,8 @@ class ConformPass extends StatelessWidget {
               width: 500,
               child: customWidget.elevatedButton(
                 callback: () {
-                  settingLogic.passConform(context: context);
-                  settingLogic.ConformController.clear();
+                  Profilelogic.passConform(context: context);
+                  Profilelogic.ConformController.clear();
                 },
                 text: "CONFORM",
                 color: Provider.of<ThemeProvider>(context).Dark ? Colors.lightBlue :Colors.lightGreen,

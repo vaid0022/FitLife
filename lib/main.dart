@@ -1,7 +1,8 @@
 
-import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/check_user.dart';
-import 'package:fitlife/Reposetory/Firebase/firebase_options.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/Reposetory/Firebase/Firebase_Auth/check_user.dart';
+import 'package:FitLife/Reposetory/Firebase/firebase_options.dart';
+import 'package:FitLife/View/splash.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
         ),
 
       ),
-      home: checkuser(),
+      home: Splash(),
     );
   }
 }

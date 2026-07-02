@@ -1,6 +1,6 @@
-import 'package:fitlife/Utility/shimmer.dart';
-import 'package:fitlife/Utility/textpadding.dart';
-import 'package:fitlife/ViewModel/DietLogic.dart';
+import 'package:FitLife/Utility/shimmer.dart';
+import 'package:FitLife/Utility/textpadding.dart';
+import 'package:FitLife/ViewModel/DietLogic.dart';
 import 'package:flutter/material.dart';
 
 class Detaildiet extends StatefulWidget {

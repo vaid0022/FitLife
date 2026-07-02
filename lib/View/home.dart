@@ -1,13 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/Reposetory/Firebase/FireStore/Fetchdata.dart';
-import 'package:fitlife/Utility/aboutFitLifewidget.dart';
-import 'package:fitlife/Utility/custom.dart';
-import 'package:fitlife/Utility/shimmer.dart';
-import 'package:fitlife/Utility/textpadding.dart';
-import 'package:fitlife/View/Setting.dart';
-import 'package:fitlife/ViewModel/HomepageModel.dart';
-import 'package:fitlife/ViewModel/SharedPrefrence.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/Reposetory/Firebase/FireStore/Fetchdata.dart';
+import 'package:FitLife/Utility/aboutFitLifewidget.dart';
+import 'package:FitLife/Utility/custom.dart';
+import 'package:FitLife/Utility/shimmer.dart';
+import 'package:FitLife/Utility/textpadding.dart';
+import 'package:FitLife/View/profile.dart';
+import 'package:FitLife/ViewModel/HomepageModel.dart';
+import 'package:FitLife/ViewModel/SharedPrefrence.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,26 +44,29 @@ class _homeState extends State<home> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Fitlife"),
-          actions: [
-            PopupMenuButton(
-              itemBuilder: (_) {
-                return [
-                  PopupMenuItem(
-                    child: Row(
-                      children: [Icon(Icons.settings), Text("Setting")],
+          title: Row(
+            children: [
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
+                },
+                child: Card(
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                        image:DecorationImage(
+                            image:AssetImage("assets/logo/FitLife.png") )
                     ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Setting()),
-                      );
-                    },
                   ),
-                ];
-              },
-            ),
-          ],
+                ),
+              ),
+              SizedBox(width: 10,),
+              Text("Fitlife"),
+            ],
+          ),
+
         ),
         body: Container(
           height: double.infinity,

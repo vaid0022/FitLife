@@ -1,6 +1,6 @@
-import 'package:fitlife/Utility/custom.dart';
-import 'package:fitlife/ViewModel/StepsLogic.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/Utility/custom.dart';
+import 'package:FitLife/ViewModel/StepsLogic.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

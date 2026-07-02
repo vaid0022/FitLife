@@ -1,10 +1,10 @@
-import 'package:fitlife/View/LoginPage.dart';
-import 'package:fitlife/View/Register.dart';
-import 'package:fitlife/View/dietpage.dart';
-import 'package:fitlife/View/home.dart';
-import 'package:fitlife/View/steps.dart';
-import 'package:fitlife/View/workoutpage.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/View/LoginPage.dart';
+import 'package:FitLife/View/Register.dart';
+import 'package:FitLife/View/dietpage.dart';
+import 'package:FitLife/View/home.dart';
+import 'package:FitLife/View/steps.dart';
+import 'package:FitLife/View/workoutpage.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';

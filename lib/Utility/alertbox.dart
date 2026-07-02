@@ -1,5 +1,5 @@
-import "package:fitlife/Utility/custom.dart";
-import "package:fitlife/ViewModel/provider.dart";
+import "package:FitLife/Utility/custom.dart";
+import "package:FitLife/ViewModel/provider.dart";
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 

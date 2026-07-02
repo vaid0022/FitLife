@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/Utility/alertbox.dart';
-import 'package:fitlife/View/home.dart';
-import 'package:fitlife/ViewModel/navifationbar.dart';
+import 'package:FitLife/Utility/alertbox.dart';
+import 'package:FitLife/View/home.dart';
+import 'package:FitLife/ViewModel/navifationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 

@@ -1,7 +1,8 @@
-import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/FirebaseLogin.dart';
-import 'package:fitlife/Utility/custom.dart';
-import 'package:fitlife/View/Register.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/Reposetory/Firebase/Firebase_Auth/FirebaseLogin.dart';
+import 'package:FitLife/Utility/alertbox.dart';
+import 'package:FitLife/Utility/custom.dart';
+import 'package:FitLife/View/Register.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -193,6 +194,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
                     email: Fopass.text.toString(),
                     context: context,
                   );
+
                 },
                 text: "Forgot Password",
                 color: Colors.blue,

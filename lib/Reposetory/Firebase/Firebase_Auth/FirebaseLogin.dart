@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/Reposetory/Firebase/Firebase_Auth/check_user.dart';
-import 'package:fitlife/Utility/alertbox.dart';
-import 'package:fitlife/View/home.dart';
-import 'package:fitlife/ViewModel/navifationbar.dart';
+import 'package:FitLife/Reposetory/Firebase/Firebase_Auth/check_user.dart';
+import 'package:FitLife/Utility/alertbox.dart';
+import 'package:FitLife/View/home.dart';
+import 'package:FitLife/ViewModel/navifationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -19,6 +19,7 @@ class loginlogic {
           email: email.toString(),
           password: pass.toString(),
         );
+
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => bottomnavigationabar()),
@@ -43,6 +44,12 @@ class loginlogic {
           email: email.toString(),
         );
         Navigator.pop(context);
+        alert.AlertBox(
+          context: context,
+          title: "Info ",
+          Decre: "Check your Email, your forgot password link send there ",
+          btnText: "OK",
+        );
       } else {
         alert.AlertBox(context: context, title: "Error", Decre: "Please enter right information", btnText: "OK");
 

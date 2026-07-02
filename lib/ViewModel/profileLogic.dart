@@ -1,12 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitlife/Utility/alertbox.dart';
-import 'package:fitlife/Utility/custom.dart';
-import 'package:fitlife/View/LoginPage.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/Utility/alertbox.dart';
+import 'package:FitLife/Utility/custom.dart';
+import 'package:FitLife/View/LoginPage.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class settingLogic {
+class Profilelogic {
   static TextEditingController ConformController = TextEditingController();
   static UserCredential? userCredential;
 

@@ -1,5 +1,5 @@
 import 'package:date_format/date_format.dart';
-import 'package:fitlife/ViewModel/provider.dart';
+import 'package:FitLife/ViewModel/provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -217,9 +217,9 @@ class listboxes extends StatelessWidget {
   }
 }
 class box extends StatelessWidget {
-  box({super.key, required this.isWorkout});
+  box({super.key,required this.height});
 
-  final bool isWorkout;
+  double height;
 
   @override
   Widget build(BuildContext context) {
@@ -227,7 +227,7 @@ class box extends StatelessWidget {
       baseColor: Colors.grey,
       highlightColor: Colors.white,
       child: Container(
-        height:isWorkout ? 300 : 400,
+        height: height ,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(21),

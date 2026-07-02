@@ -1,4 +1,4 @@
-import 'package:fitlife/Utility/textpadding.dart';
+import 'package:FitLife/Utility/textpadding.dart';
 import 'package:flutter/cupertino.dart';
 
 class fitLife {
